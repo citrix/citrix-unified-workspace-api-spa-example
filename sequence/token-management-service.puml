@@ -1,0 +1,82 @@
+@startuml "token-management-service"
+
+title Single Page Application With Token Management Service
+skinparam DefaultTextAlignment Center
+skinparam monochrome true
+autonumber
+participant "Browser" as browser 
+participant "SPA" as spa
+participant "Token Management Service" as tms 
+participant "Citrix Authorization\n Server" as athena 
+participant "Workspace API" as wspapi
+participant "Web Helper" as help
+
+== Logon ==
+browser -> spa : Load
+spa -> tms : GET /configuration
+tms -> wspapi : GET customer.cloud.com/api/discovery/configurations
+tms <-- wspapi : Configurations document
+spa <-- tms : Configurations document
+spa -> tms : GET /accesstoken
+tms -> athena : GET /core/.well-known/openid-configuration
+tms <-- athena : OpenId configuration document
+tms -> athena : GET /core/connect/authorize
+tms <-- athena : 302 Initiate authentication flow
+tms --> spa : 401 Unauthorized - NoToken
+spa --> browser : 302 Redirect to /core/login,\n redirecting the browser to Citrix Identity Provider
+browser -> athena : GET /core/login
+browser <-> athena : Login steps (dependant on configured IdP)
+athena --> browser : 302 Redirect to tms /oauth/callback +auth code
+browser -> tms : GET /oauth/callback +auth code
+tms -> athena : GET /core/authorize/callback
+tms <-- athena : Refresh token + [Access Token 1]
+tms -> tms : Create authenticated web session
+tms -> spa : [Access Token 1] + authenticated session cookie
+
+== Request Resources ==
+browser -> spa : Get resources
+spa -> wspapi : GET customer.cloud.com/api/store/resources [Access Token 1]
+wspapi -> spa : Resource details
+spa -> browser : Display resources
+
+== Favorite Resource ==
+browser -> spa : Favorite resource
+spa -> wspapi : POST customer.cloud.com/api/store/resources/{resourceId}/$favorite [Access Token 1]
+opt Access Token expired
+spa <-- wspapi : 401 Unauthorized
+spa -> tms : GET /accesstoken
+tms -> athena : GET /core/connect/token
+athena --> tms : Access token
+tms --> spa : Access token
+spa -> wspapi : POST customer.cloud.com/api/store/resources/{resourceId}/$favorite [Access Token 2]
+end opt
+
+wspapi --> spa : 200 OK [Status]
+
+== Native HDX Launch (Protocol Handler) ==
+browser -> spa : Native Launch
+spa -> wspapi : POST customer.cloud.com/api/store/resources/{resourceId}/tickets\n [Access Token 2]
+spa <-- wspapi : Ica Launch Ticket (Ica ticket url)
+spa -> spa : Extract launch url,\nrename protocol to receiver://{ticketurl}
+spa -> browser : Initiate protocol handler receiver://{ticketurl}
+browser -> help : Transfer ticket data
+help -> wspapi :  POST\n customer.cloud.com/api/store/client/icaFile\n [Body: Ticket]
+wspapi -> help : Ica File
+help -> help : HDX Launch
+
+== Logoff ==
+browser -> spa : Logoff
+spa -> wspapi : POST customer.cloud.com/api/store/sessions/$logoff log off active sessions
+wspapi --> spa : 200 OK
+spa -> tms : GET /logoff
+tms -> tms : Validate session id and retrieve refresh-token
+alt No session-id cookie or refresh-token
+tms --> browser : 401 Unauthorised
+else Session cookie valid
+tms -> athena : Logoff (refresh-token) [Access Token 2]
+athena -> athena : Invalidate the refresh-token and any related tokens. 
+athena --> tms : Success
+tms -> tms : Clear stored tokens
+tms --> browser : Success and reset the session-id cookie
+end alt
+@enduml
