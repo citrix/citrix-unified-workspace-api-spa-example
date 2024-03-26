@@ -73,6 +73,46 @@ The SPA frontend implementation uses simple javascript without any framework. Fo
 
 The implementation retrieves the access token and stores it inside a private javascript closure. There are more secure alternatives involving web worker threads, or to simply have all token calls be handled by the backend (as in the Citrix.Unified.Api.Test.WebClient example).
 
+## Resource launches
+
+This example supports three types of Application/ Desktop launch via Workspace, native, HTML5 and IFrame.
+
+You can switch between the launch types using the dropdown:
+
+![Launch Types](./screenshots/Launch_Types.PNG)
+
+### Native (Receiver) launches
+
+Native launches work by calling the native Citrix Workspace Application (CWA) with a launch ticket that can be obtained from the `launchstatus` endpoint, returned as part of the resource enumeration. This response contains the URL to redirect the user to.
+
+This launch flow is detailed in the [sequence diagram above](#spa-and-token-management-service-sequence-diagram).
+
+### HTML5 and IFrame launches
+
+HTML5 and IFrame launches work similarly to each other. These launch methods make use of the [Citrix HTML5 HDX SDK](https://developer-docs.citrix.com/en-us/citrix-workspace-app-for-html5/workspace-app-html5-hdx-sdx/hdx-sdk-html5). This SDK uses the ICA file which contains information about how a connection should be established. An ICA file can be obtained from the `launchica` endpoint, returned as part of the resource enumeration.
+
+![HTML Launch Flow](./sequence/html5-launch-flow.png)
+
+Source code to launch a resource in a new tab. For more information check the [SDK documentation](https://developer-docs.citrix.com/en-us/citrix-workspace-app-for-html5/workspace-app-html5-hdx-sdx/hdx-sdk-html5)
+
+```js
+citrix.receiver.setPath("https://localhost:7183/receiver"); 
+let icaFile = await apiHandler.get(launchUrl)
+const sessionId = "html5"
+const connectionParams = {
+    "launchType": "newtab",
+    "container": {
+        "type": "window"
+    }
+};
+
+function sessionCreated(sessionObject){
+    const launchData = {"type": "ini", value: icaFile.data};
+    sessionObject.start(launchData);
+}
+citrix.receiver.createSession(sessionId, connectionParams,sessionCreated);
+```
+
 ## Javascript Libraries
 
 The repo includes the following javascript libraries,
@@ -81,6 +121,7 @@ The repo includes the following javascript libraries,
 - Handlebars, https://handlebarsjs.com/
 - jQuery,  https://jquery.com/
 - Semantic UI CSS, https://semantic-ui.com/
+- Citrix HTML5 HDX SDK, https://developer-docs.citrix.com/en-us/citrix-workspace-app-for-html5/workspace-app-html5-hdx-sdx/hdx-sdk-html5
 
 ## License
 

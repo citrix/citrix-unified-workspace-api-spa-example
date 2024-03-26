@@ -1,0 +1,2143 @@
+/*Copyright (c) 2014 Citrix Systems, Inc.
+The materials in this file are protected by copyright and other intellectual property laws.
+Copying and use is permitted only by end users to enable use of Citrix server technology.
+Any other reproduction or use of this file, or any portion of it, is unlicensed.
+In no event may the file be reverse engineered or may copies be made in association with deobfuscation, decompilation or disassembly.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.*/
+
+/*
+font file for citrixsans light is taken from https://s3.amazonaws.com/citrix-cdn/can.cdn/marketing/assets/fonts/citrix-sans/citrixsans-light.eot 
+similarly other font file are taken from the link https://s3.amazonaws.com/citrix-cdn/can.cdn/marketing/assets/fonts/citrix-sans/[file-name]
+font-weight is taken from the following link- https://s3.amazonaws.com/citrix-cdn/can.cdn/marketing/assets/fonts/citrix-fonts-linking.css
+*/
+@font-face{
+	font-family:"citrixsans";
+	font-style: normal;
+	font-weight: 400;
+	src:url("../resources/fonts/citrixsans/citrixsans-regular.eot");
+	src:url("../resources/fonts/citrixsans/citrixsans-regular.eot?") format('eot'),
+		url("../resources/fonts/citrixsans/citrixsans-regular.woff") format("woff"),
+		url("../resources/fonts/citrixsans/citrixsans-regular.ttf") format("truetype"),
+		url("../resources/fonts/citrixsans/citrixsans-regular.svg#7816f72f-f47e-4715-8cd7-960e3723846a") format("svg");
+}
+
+@font-face{
+	font-family:"citrixsans";
+	font-style: normal;
+	font-weight: 700;
+	 src:url("../resources/fonts/citrixsans/citrixsans-bold.eot");
+	 src:url("../resources/fonts/citrixsans/citrixsans-bold.eot?") format('eot'),
+		url("../resources/fonts/citrixsans/citrixsans-bold.woff") format("woff"),
+		url("../resources/fonts/citrixsans/citrixsans-bold.ttf") format("truetype"),
+		url("../resources/fonts/citrixsans/citrixsans-bold.svg#7816f72f-f47e-4715-8cd7-960e3723846a") format("svg"); 
+}
+
+@font-face{
+	font-family:"citrixsans";
+	font-style: italic;
+	font-weight: 700;
+	src:url("../resources/fonts/citrixsans/citrixsans-bolditalic.eot");
+	src:url("../resources/fonts/citrixsans/citrixsans-bolditalic.eot?") format('eot'),
+		url("../resources/fonts/citrixsans/citrixsans-bolditalic.woff") format("woff"),
+		url("../resources/fonts/citrixsans/citrixsans-bolditalic.ttf") format("truetype"),
+		url("../resources/fonts/citrixsans/citrixsans-bolditalic.svg#7816f72f-f47e-4715-8cd7-960e3723846a") format("svg");
+}
+
+@font-face{
+	font-family:"citrixsans";
+	font-style: italic;
+	font-weight: 400;
+	src:url("../resources/fonts/citrixsans/citrixsans-italic.eot");
+	src:url("../resources/fonts/citrixsans/citrixsans-italic.eot?") format('eot'),
+		url("../resources/fonts/citrixsans/citrixsans-italic.woff") format("woff"),
+		url("../resources/fonts/citrixsans/citrixsans-italic.ttf") format("truetype"),
+		url("../resources/fonts/citrixsans/citrixsans-italic.svg#7816f72f-f47e-4715-8cd7-960e3723846a") format("svg");
+}
+
+@font-face{
+	font-family:"citrixsans";
+	font-style: normal;
+	font-weight: 200;
+	src:url("../resources/fonts/citrixsans/citrixsans-light.eot");
+	src:url("../resources/fonts/citrixsans/citrixsans-light.eot?") format('eot'),
+		url("../resources/fonts/citrixsans/citrixsans-light.woff") format("woff"),
+		url("../resources/fonts/citrixsans/citrixsans-light.ttf") format("truetype"),
+		url("../resources/fonts/citrixsans/citrixsans-light.svg#7816f72f-f47e-4715-8cd7-960e3723846a") format("svg");
+}
+
+@font-face{
+	font-family:"citrixsans";
+	font-style: italic;
+	font-weight: 200;
+	src:url("../resources/fonts/citrixsans/citrixsans-lightitalic.eot");
+	src:url("../resources/fonts/citrixsans/citrixsans-lightitalic.eot?") format('eot'),
+		url("../resources/fonts/citrixsans/citrixsans-lightitalic.woff") format("woff"),
+		url("../resources/fonts/citrixsans/citrixsans-lightitalic.ttf") format("truetype"),
+		url("../resources/fonts/citrixsans/citrixsans-lightitalic.svg#7816f72f-f47e-4715-8cd7-960e3723846a") format("svg");
+}
+
+@font-face{
+	font-family:"citrixsans";
+	font-style: normal;
+	font-weight: 600;
+	src:url("../resources/fonts/citrixsans/citrixsans-semibold.eot");
+	src:url("../resources/fonts/citrixsans/citrixsans-semibold.eot?") format('eot'),
+		url("../resources/fonts/citrixsans/citrixsans-semibold.woff") format("woff"),
+		url("../resources/fonts/citrixsans/citrixsans-semibold.ttf") format("truetype"),
+		url("../resources/fonts/citrixsans/citrixsans-semibold.svg#7816f72f-f47e-4715-8cd7-960e3723846a") format("svg");
+}
+
+@font-face{
+	font-family:"citrixsans";
+	font-style: italic;
+	font-weight: 600;
+	src:url("../resources/fonts/citrixsans/citrixsans-semibolditalic.eot");
+	src:url("../resources/fonts/citrixsans/citrixsans-semibolditalic.eot?") format('eot'),
+		url("../resources/fonts/citrixsans/citrixsans-semibolditalic.woff") format("woff"),
+		url("../resources/fonts/citrixsans/citrixsans-semibolditalic.ttf") format("truetype"),
+		url("../resources/fonts/citrixsans/citrixsans-semibolditalic.svg#7816f72f-f47e-4715-8cd7-960e3723846a") format("svg");
+}
+
+#CitrixClientImeBuffer:hover {
+	cursor: default;
+} 
+.FpsDivElement{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 200px;
+	color: rgb(250, 235, 215);
+	background: rgba(0, 0, 0, 0.8);
+	z-index: 9;
+	opacity : 1;
+}
+.FpsDivElement:hover{	
+	opacity : 0.1;
+}
+.FPSTableElement{
+	width: 200px;
+	font-size:14px;
+}
+.FPSTableLeftElement{
+	width: 100px;
+}
+.FPSTableRightElement{
+	width: 100px;
+}
+.FpsInnerDivElement{
+	width: 100px;
+}
+
+.scrollContent {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.scrollHolder {
+	position: relative;
+}
+
+::-webkit-scrollbar-thumb {
+	width: 4px;
+	height: 64px;
+	background-image: url("../resources/images/scroll_bar.png");
+}
+
+.scrollbar {
+	overflow-x: hidden;
+	overflow-y: scroll;
+	scrollbar-arrow-color: #C8C8C8;
+	scrollbar-darkshadow-color: #C8C8C8;
+	scrollbar-face-color: #C8C8C8;
+	scrollbar-highlight-color: #C8C8C8;
+	scrollbar-shadow-color: #C8C8C8;
+	scrollbar-track-color: #FFFFFF;
+}
+body,button{
+	font-family: "citrixsans","Helvetica Neue", "Helvetica", "Arial", "Sans Serif" !important;
+}
+
+
+
+#CitrixXtcRoot{
+	background-color: #000000;
+	position:absolute;	
+}
+#CitrixSuperRenderCanvas{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 8;
+}
+/*Logging file styling */
+.log-page { 
+  background-color : #FFFFFF;
+}
+/*Added these divs to center align the whole log page in html5 receiver*/
+#logMainDiv{
+	width: 100%;
+	display : table;
+	height : 130px;
+	text-align : center;
+	max-width : 960px;
+	margin : auto;
+}
+
+#logContentsDiv{
+	display : table-cell;
+	vertical-align : middle;
+}
+
+.log-label
+{
+	color: #666666;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 18px;
+	text-align: left;
+    margin-bottom:8px;
+}
+.log-files
+{
+    border:1px solid #999999;
+    margin-bottom:10px;
+	overflow: auto;
+	background-color: #ffffff;
+	height: 130px;
+	margin-bottom : 20px;
+}
+.log-files-list
+{
+	text-align:left;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+.log-list-item {
+	position:relative;
+	margin: 0px;
+	height:40px;
+	
+}
+.log-list-item:hover
+{
+   background-color:  #bbbbbb;
+}
+.log-display{
+	position:relative;
+	left: 10px;
+	top:10px;
+	height:34px;
+	bottom:10px;
+	color: #666666;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 18px;
+	text-align: left;
+}
+.log-download
+{
+    background-image:url("../resources/images/icon_log_download.png");
+    border:0 none;
+    width:17px;
+    height:15px;
+	margin: 13px 0px 0px 0px;
+	float: right;
+}
+.log-delete
+{
+    background-image:url("../resources/images/icon_log_del_btn.png");
+    border:0 none;
+    width:13px;
+    height:13px;
+	float: right;
+	position: relative;
+	margin: 14px 14px 0px 18px;
+}
+#log-start
+{
+	margin-right : 20px;
+}
+#log-clear{
+	visibility : hidden;
+}
+#logsBtnContainer{
+	text-align : left;
+}
+.log-button
+{
+    border:0;
+	color:  #ffffff;
+	font-size: 14px;
+	font-weight: 600;
+	text-align: center;
+	background-color:  #02a1c1;
+	min-width: 134px;
+	height: 40px;
+	margin : 0px 0px 25px 2px;
+	outline : 1px solid #02a1c1;
+} 
+.log-button:focus{
+	border : 1px solid #FFFFFF;
+}
+.log-button:hover{
+	background-color:  rgba(2, 161, 193, 0.6);
+	outline : 1px solid rgba(2, 161, 193, 0.6);
+}
+.log-button:active{
+	background-color:  rgba(2, 161, 193, 0.6);
+	color:  rgba(255, 255, 255, 0.6);
+	outline : 1px solid rgba(2, 161, 193, 0.6);
+}
+
+/*Common border class for all the dialogs */
+.borderClass{
+	border : 1px rgba(255,255,255,0.28) solid;
+	-webkit-box-shadow: 3px 6px 7px 0px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: 3px 6px 7px 0px rgba(0, 0, 0, 0.1);
+	box-shadow: 3px 6px 7px 0px rgba(0, 0, 0, 0.1);
+}
+
+/*Receiver icon in the toolbar styling */
+#logoTab {
+	background-color : rgba(0,0,0,1.0);
+	border-left : 1px rgba(255,255,255,0.28) solid;
+	border-top : 1px rgba(255,255,255,0.28) solid;
+	border-bottom : 1px rgba(255,255,255,0.28) solid;
+}
+#logoTab:hover {
+	background-color : rgba(0,0,0,1);
+}
+.transitionclass{
+	transition: opacity 0.3s linear;
+}
+/*Arrow image in the receiver icon in toolbar*/
+.arrowImgToolbar{
+	position: absolute;
+	left : 4px;
+	top : 20px;
+	background-color : transparent;
+}
+
+.rightArrowImg{
+	-webkit-transform: rotate(180deg);     /* Chrome and other webkit browsers */
+	-moz-transform: rotate(180deg);        /* FF */
+	-o-transform: rotate(180deg);          /* Opera */
+	-ms-transform: rotate(180deg);         /* IE9 */
+	transform: rotate(180deg);
+}
+
+/*Receiver image in the receiver icon in the toolbar*/
+.logoImgToolbar{
+	position : absolute;
+	left : 18px;
+	top : 14px;
+}
+
+/*Other options in the toolbar like clipboard, file upload ,lock*/
+.menuItem{
+	background-color : #574f5b;
+	border-top : 1px rgba(255,255,255,0.28) solid;
+	border-bottom : 1px rgba(255,255,255,0.28) solid;
+}
+
+.menuItem:hover,.menuItem:active{
+	background-color : #3f3643; 
+}
+
+.toolbarMinimized{
+	border-right : 1px rgba(255,255,255,0.28) solid;
+}
+
+.closeBtn{
+	position: relative;
+	opacity:1.0;
+	background-image : url("../resources/images/icon_close.png");
+	width : 17px;
+	height : 16px;
+	float : right;
+	margin : 20px 18px 4px 0px;
+}
+.closeBtn:hover{
+	opacity:0.5;
+}
+
+.closeBtn:active{
+	opacity:0.35;
+}
+
+.fileTransferErrorDialogHeader{
+	clear : both;
+	font-size: 22px;
+	font-weight: 400;
+	position: relative;
+	margin :4px 40px 30px 40px;
+	color: #FFFFFF;
+}
+.fileTransferErrorMainMsg{
+	font-size:14px;
+	font-weight:400;
+	line-height:18px;
+	color:#FFFFFF;
+    margin: 20px 40px 40px 40px;
+}
+
+.close_button{
+	background-image : url("../resources/images/icon_close.png");
+	width : 17px;
+	height : 16px;
+	float : right;
+	margin :  20px 20px 6px 0px;
+}
+.close_button:focus{
+    opacity:0.5;
+}
+.close_button:hover{
+    opacity:0.5;
+}
+.close_button:active{
+    opacity:0.35;
+}
+
+
+/* URL Redirection dialog*/
+.urlRedirectionDialog{
+	width: 394px;	
+	background-color:  #574f5b;
+	position: absolute;
+	left: 50%;
+	margin-left: -197px;
+	top:50%;
+	margin-top:-190px;
+	z-index: 9;
+}
+.urlRedirectionTitle{
+	position: relative;
+	margin-top: 4px;
+	color: #ffffff;
+	font-size: 22px;
+	font-weight: 500;
+	text-align: center;
+	clear: both;
+}
+.urlDialogHeader{
+	clear: both;
+	position: relative;
+	margin:32px 40px 10px 40px;
+	font-size: 14px;
+	font-weight: 200;
+	line-height:18px;
+	color: #FFFFFF;
+	margin-right: 24px;
+}
+.showHideContainer{
+	color : #FFFFFF;
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 18px; 
+	text-align: left;
+	margin: 15px 40px 0px 40px;
+}
+.urlRedirected{
+	color : #FFFFFF;
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 18px; 
+	text-align: left;
+	margin: 15px 40px 0px 40px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden; 
+}
+.checkboxURL{
+	margin: 0px;
+    border: 0px;
+    float: left;
+	width : 12px;
+	height : 12px;
+}
+.checkboxLabelURL{
+    display: block;
+    float: right; 
+	width : 298px;
+	line-height: 12px;	
+}
+.dontShowAgainContainer{
+	margin: 15px 40px 0px 40px;
+    color: #FFF;
+    font-size: 12px;
+}
+.allowPopupsMsg{
+	clear : both;
+	display : none;
+	padding-top: 10px;
+}
+.show_hide_arrow{
+	background-image : url("../resources/images/show_hide_arrow.png");
+	width : 5px;
+	height : 11px;
+	margin-right: 10px;
+	display : inline-block;
+}
+.show_hide_arrow_rotate{
+	-webkit-transform: rotate(90deg);     /* Chrome and other webkit browsers */
+	-moz-transform: rotate(90deg);        /* FF */
+	-o-transform: rotate(90deg);          /* Opera */
+	-ms-transform: rotate(90deg);         /* IE9 */
+	transform: rotate(90deg);
+}
+
+button{
+	outline:none;
+	border: 0px;
+	margin:0px;
+}
+button:hover:active:focus{
+	outline : none;
+	border : 0;
+}
+.viewInComputerBtn{
+	background-color: #02a1c1;
+	width: 313px;
+	height: 44px;
+	margin: 20px 40px 10px 40px;
+	font-family: citrixsans;
+	color: #FFFFFF;
+	font-weight: 500;
+	font-size: 16px;	
+}
+.viewInComputerBtn:hover{
+	background-color:  rgba(2, 161, 193, 0.7);
+	color: #FFFFFF;
+	
+}
+.viewInComputerBtn:active{
+	color: rgba(255,255,255,0.6);
+	background-color:  rgba(2, 161, 193, 0.7);
+}
+.viewInSessionBtn{
+	background-color: #3f3643;
+	width: 313px;
+	height: 44px;
+	font-family: citrixsans;
+	text-align: center;
+	color: #FFFFFF;
+	font-weight: 500;
+	font-size: 16px;
+	margin : 0px 40px 40px 40px;
+}
+.viewInSessionBtn:hover{
+	background-color: rgba(63,54,67,0.7);
+}
+.viewInSessionBtn:active{
+	color: rgba(255,255,255,0.6);
+	background-color: rgba(63,54,67,0.7);
+}
+
+/* Error Dialog */
+.errorDialog{
+	background-color : rgba(86,86,86,0.97);
+	width: 394px;
+	position: relative;
+	top:35.81%;
+	left: 50%;
+	margin-left:-197px;
+	z-index: 16;/*Error dialog will have highest z-index */
+}
+.errorDialogHeader{
+	clear : both;
+	font-size: 22px;
+	font-weight: 400;
+	position: relative;
+	margin :4px 40px 30px 40px;
+	color: #FFFFFF;
+}
+.errorMainMsg{
+	font-size:14px;
+	font-weight:400;
+	line-height:18px;
+	color:#FFFFFF;
+	margin:0px 40px 0px;
+}
+#showHideErrorDetails{
+	font-size : 14px;
+}
+.errorDetailsMsg{
+	margin:5px 0px 10px 15px;
+	font-size:14px;
+	font-weight: 400;
+	color: #FFFFFF;
+}
+
+.closeSessionBtn{
+	text-align: center;
+	background-color: #02a1c1;
+	width: 313px;
+	height: 44px;
+	margin: 20px 40px 20px 40px;
+	font-family: citrixsans;
+	color: #FFFFFF;
+	font-weight: 500;
+	font-size: 16px;	
+}
+.closeSessionBtn:hover , .usbBtnCls:hover,.usbReleaseAllConfirmationBtnCls:hover {
+	background-color:  rgba(2, 161, 193, 0.7);
+	color: #FFFFFF;
+	
+}
+.closeSessionBtn:active, .usbBtnCls:active, .usbReleaseAllConfirmationBtnCls:active {
+	color: rgba(255,255,255,0.6);
+	background-color:  rgba(2, 161, 193, 0.7);
+}
+
+.downloadLogLink {
+	display: block;
+	text-align: center;
+	margin: 0px 40px 20px 40px;
+    font-family: citrixsans;
+	font-size: 16px;
+	font-weight: 500;
+	color: #1BB2D0;
+}
+
+.downloadLogLink:hover {
+	color: #00BBE1;
+}
+
+/*PDF print Dialog*/
+.printDialog{
+	width: 300px;
+	background-color: #574f5b;
+	position: absolute;
+	left: 50%;
+	margin-left: -150px;
+	top:35.81%;
+	z-index: 9;
+}
+
+.printDialogHeader{
+	clear: both;
+	position: relative;
+	font-size: 14px;
+	font-weight: 200;
+	line-height:18px;
+	color: #FFFFFF;
+	margin : 15px 24px 13px 24px;
+}
+
+.printProcessingMessage{
+    position: relative;
+    margin-left: 24px;
+    margin-right: 24px;
+    margin-bottom:33px;
+    font-size: 14px;
+    font-weight: 200;
+    line-height:18px;
+    color: #FFFFFF;
+}
+
+.continueBtn{
+	position: relative;
+	width: 252px;
+	height : 32px;
+	font-family: citrixsans;
+	font-weight:700;
+	text-align: center;
+	margin : 0px 24px 20px 24px;
+	color: #FFFFFF;
+	font-size: 14px;	
+	background-color: #02a1c1;
+}
+
+.continueBtn:hover{
+	background-color:  rgba(2, 161, 193, 0.6);
+}
+
+.continueBtn:active{
+	background-color:  rgba(2, 161, 193, 0.6);
+	color:  rgba(255, 255, 255, 0.6);
+}
+
+.downloadPDFDialog {
+    position: absolute;
+    min-width: 180px;
+    bottom: 60px;
+    right: 30px;
+    padding: 5px;
+    background-color: #574f5b;
+	z-index: 9;
+}
+
+.downloadingImage {
+    position:relative;
+    display: inline-block;
+    float: left;
+	margin-bottom : 0px !important;
+}
+
+.downloadPDFMsg{
+    position: relative;
+    clear: both;
+    top: 5px;
+    left: 10px;
+    font-family: citrixsans;
+    font-weight: 200;
+    font-size: 14px;
+    color: #FFFFFF;
+}
+
+.downloadDialogCloseBtn{
+    margin: 0 0 0 10px;
+}
+/*CSS for 16 x 16 px close button*/
+.smallCloseBtn{
+    position: relative;
+    background-image : url("../resources/images/ico_s_close.png");
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    float: right;
+    opacity:1.0;
+}
+#reconnectingOverlay{
+	background-color: rgba(0,0,0,0.25);
+}
+.overlay{
+	width: 100%;
+	height: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index : 15;/*Error dialog will have highest z-index */
+}
+
+.superOverlay{
+  width: 100%;
+	height: 100%;
+    background: rgba(0,0,0,0.8);
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index : 14;/*Error dialog will have highest z-index */
+}
+.overlayInnerDiv{
+	margin-left: -170px;
+	margin-top: -70px;
+	width: 300px;
+	height: 100px;
+	padding: 20px;
+	text-align: center;
+	position: relative;
+	top: 50%;
+	left: 50%;
+}
+.overlayTextStyle{
+    color: #FFFFFF;
+	font-size : 14px;
+	margin-bottom: 5px;
+}
+.overlaySpinStyle{
+	left: 900px;
+    top: 505px;
+    
+}
+.reconnectingDiv{
+	background-color: #574f5b;
+    width: 246px;
+    min-height: 100px;
+    float: right;
+    margin: 3px;
+}
+
+.reconnectingReceiver{
+	background-image : url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAABV0RVh0Q3JlYXRpb24gVGltZQAxMi84LzEwPk8hRgAAABx0RVh0U29mdHdhcmUAQWRvYmUgRmlyZXdvcmtzIENTNui8sowAAAMaSURBVDiNbZNPaFxlFMV/82Wm47zpexmSGsH+mTrzOhNNopBNFqmIYzRUmE0WLiakq9AsXNTJVKhgaYRApXFhbHWTTd1UW6mraVJLg10EV4JtoXGT0KSQTa2ZSUzmve/lzXddVEsbvXAWF+75wYVzIvzPjI+P9wLHgCNABFhumubs9JfTv+6+jTy7lEql7ra29ouRCG/FYjE6Ojqo1WoEQUDTGLTv/7Jeq334w9Wrd/4DGBoaer/Vca4cPHRo78jICK7rAnDv3j1mZmYA8LWP5/neRr3+QbVarQJEATKZzGtKqe+7urv3VioV1tfXufDVBZaWl9je3iYWi2FECHd2CMMwoZS64rru0aWlpd8UgOu606lUyq5UKiwsLDB2YozF3xfp6enhcPowWut/FBBoTRAE1v79L08DRFtbW7t9zxsYHR2lXq9z7tznDAy8Q7lcBqBarXJ/8T6CEOgAX/tPIDp407btN6K2bb+7E4b09fUxOTlJfM8eyuUys7PXufj1N0QiEaItLTSbhjDceQrRWpNMJt9TYswrjuMAcOfuXfKdeQDOn/+C8XKZT06f5q/NTcbGTnDgwEF87TM1NUU8kUBE0srT2m94DQCaYYjWPgCmGbL6cJWV1RV8rSkWi7S3t+E4Dv39/ViJFwiCoBn1Go3VtbU1APKdeeZvzSMIn545w8TEZxjT5OzEWYwYbv98m/6j/QA8eLCC53srKKXclzo65NqP16S+UZd8Pi+lUknCZvicjh8fkUw2K4/+eCRzc7Oyb9+L0tLS0glAIpGY63m9Rzzfk/n5W5LNZiWXy0mpVJLh4WHJd3ZKOp2WGz/dEF/70tvbK5ZlzT+NsFLKtW17Y3BwUBpeQ2r1mpz6+JQUCgUpFApy8qOT8vjPx9LwG1IsFsW27Q2lVO65TkSj0beTyWQ9l8vJpW8vied7srW9JVvbW+JrXy5/d1m6urokmUxuRqPRgd09AogopY7E4/HrlmUZx3Ekk8lINpuVVCollmWZeDx+Uyn16rPm3ZTIk49UWil1TCmVBjDGPDTG3DTGLAMGkH8NfwOIXoaSOHY6HAAAAABJRU5ErkJggg==');
+	width : 16px;
+	height : 16px;
+	margin : 25px 10px 0px 25px;
+	display : inline-block;
+}
+.connectionStatus{
+	font-size: 16px;
+	color: #ffffff;
+	position :  relative;
+	top : -3px;
+}
+.reconnectingStatus{
+	color : #AEAEAE;
+	font-size :  12px;
+	margin : 10px 25px 25px 51px;
+}
+
+
+.spinner28x28 {
+	display : inline-block;
+	width:28px;
+	height:28px;
+	margin-bottom: 10px;
+	background: url("../resources/images/spinner28x28.png") no-repeat;
+}
+.spinnerRotate {
+	-webkit-animation: rotate 0.8s steps(4) infinite;
+	-moz-animation: rotate 0.8s steps(4) infinite;
+	animation: rotate 0.8s steps(4) infinite;
+}
+
+@-webkit-keyframes rotate
+{
+	0%   {}
+	100% {-webkit-transform: rotate(360deg);}
+}
+@-moz-keyframes rotate
+{
+	0%   {}
+	100% {-moz-transform: rotate(360deg);}
+}
+@keyframes rotate
+{
+	0%   {}
+	100% {transform: rotate(360deg);}
+}
+
+.smallCloseBtn:hover{
+    opacity:0.3;
+}
+
+.smallCloseBtn:active{
+    opacity:0.1
+}
+/*USB redirection dialog */
+table {
+	width: 450px;
+    color: white;
+    vertical-align: center;
+}
+
+th{
+	padding: 10px;
+	font-size: 14px;
+	text-align : left;
+	max-width: 130px;
+	overflow: hidden;
+}
+td{
+	padding: 0px 10px 10px 10px;
+	font-size: 14px;
+	max-width: 130px;
+	overflow: hidden;
+}
+
+.usbredirectiondialog{
+	position: absolute;
+	left: 50%;
+	margin-left : -250px;
+	top: 50%;
+	margin-top : -125px;
+	width: 500px;
+	font-size: 24px;
+	color: white;
+	background-color : #574f5b;
+	z-index : 9;
+}
+
+.usbredirectiondialogExpanded{
+    height: 370px;
+}
+
+.usbTitle{
+	font-weight: bold;
+    margin: 20px 24px 10px 24px;
+	clear : both;
+}
+.stopButton{
+	text-align : center;
+	width  :100px;
+	min-height : 32px;
+}
+.usbButtonsDiv{
+	margin: 16px 24px;
+	font-size : 14px;
+	text-align : center;
+}
+
+.usbBtnCls{
+	font-size: 14px;
+	text-align: center;
+	color: #FFFFFF;
+	background-color:#02a1c1;
+	border: 0;
+	float : right;
+	line-height: 14px;
+	word-break: break-word;
+}
+#usbReleaseAllBtn{
+	height: 32px;
+	min-width: 100px;
+}
+
+.usbHeaderMsg{
+	margin : 0px 24px 10px 24px;
+	font-size : 14px;
+}
+.usbAddBtnCls{
+	margin : 0px 0px 16px 0px;
+	float : left;
+	height: 32px;
+	min-width: 100px;
+}
+.usbTableDiv{
+	max-height : 175px;
+	overflow-y : auto;
+	overflow-x : hidden;
+	border :  1px solid rgba(255,255,255,0.5);
+	width : 450px;
+	margin-left : 24px;
+}
+.releaseAllConfirmationDiv {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 500px;
+	margin-left : -250px;
+	min-height: 120px;
+	z-index : 0;
+	display : none;
+	background-color : rgba(0,0,0,0.35);
+}
+.releaseAllConfirmationDialog {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 480px;
+	margin-left : -240px;
+	min-height: 120px;
+	font-size: 24px;
+	color: white;
+}
+.releaseAllConfirmationBackground{
+	background-color : #FFFFFF;
+	position:absolute;
+	display:none;
+}
+.usbReleaseAllWarningImg{
+	display: table-cell;
+	position: relative;
+	background: url("../resources/images/warningIcon.png") no-repeat;
+	z-index: 0;
+	position: absolute;
+	width: 32px;
+	height: 32px;
+	margin-top: 2px;
+	margin-left: 40px;
+}
+.confirmationMsg
+{
+	position:relative;
+	color:#000000;
+	height:auto;
+	margin-top:45px;
+	font-size: 22px;
+	text-align:left;
+	word-wrap: break-word ;
+	margin-left: 85px;
+    margin-right: 40px;
+}
+.usbReleaseAllConfirmationBtnCls {
+	position: relative;
+	background-color: #02a1c1;
+	display: inline-table;
+	height: 30px;
+	width: 120px;
+	text-align: center;
+	font-size: 14px;
+	color: #FFFFFF;
+	font-weight: 400;
+}
+.usbReleaseAllCancelBtnCls {
+	position: relative;
+	background-color: #bbbbbb;
+	display: inline-table;
+	height: 30px;
+	width: 120px;
+	text-align: center;
+	font-size: 14px;
+	color: #FFFFFF;
+	font-weight: 400;
+}
+.usbReleaseAllCancelBtnCls:hover{
+	background-color:  rgba(187,187,187, 0.6);
+}
+.usbReleaseAllCancelBtnCls:active{
+	background-color:  rgba(187,187,187, 0.6);
+	color:  rgba(255, 255, 255, 0.6);
+}
+.releaseAllMsg{
+	position: relative;
+	margin: 25px 25px 25px 25px;
+	font-size: 16px;
+}
+
+.releaseAllButtonsDiv{    
+	float: right;
+	margin: 24px 30px 24px;
+}
+
+.centerAlign{
+	text-align : center;
+}
+
+#CtxToolbar{
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+}
+
+#CtxReceiver{
+	position:absolute;
+	top:0px;
+	left:100px;
+	z-index : 12;
+	background-image:url('../resources/images/icon_receiver.png');
+}
+
+.toolbarItem{
+	border-radius: 50%;	
+	border : 1px solid #666666;
+	background-color:  rgba(0, 0, 0, 0.7);
+	box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.4);
+	width: 40px;
+	height: 40px;
+	background-position: center;
+    background-repeat: no-repeat;
+	z-index : 12;
+}
+.receiver{
+	background-size: 30px 30px;
+	position:relative;
+	left:0px;
+	top:0px;
+	float:left; 
+	background-position : center;
+}
+.leftFloat{
+	float:left;
+}
+.rightFloat{
+	float :right;
+}
+
+
+.secondaryMenu div{
+	color:  #ffffff;
+	font-size: 14px;
+	font-weight: 400;	
+	text-align: left;
+	margin :10px 25px 10px 25px;
+}
+
+.secondaryMenu{
+    margin-top: 0px;
+    display: block;   
+    border-style: solid;
+    border-width: 1px;
+    border-color: #666666;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+	white-space: nowrap;	
+	position: absolute;
+	border-radius: 5px;
+}
+
+
+.secondaryTopMenu:before{
+	border-bottom: 7px solid rgba(0, 0, 0, 0.7);
+    border-right: 7px solid transparent;
+    border-left: 7px solid transparent;
+    top: -7px;
+    content: '';
+    display: block;
+    position: absolute;
+	left : 12px;
+}
+
+.secondaryTopMenu{
+    top: 48px;
+}
+
+.secondaryLeftMenu:before{
+	border-bottom: 7px solid rgba(0, 0, 0, 0.7);
+    border-right: 7px solid transparent;
+    border-left: 7px solid transparent;
+    left: -11px;
+    content: '';
+    display: block;
+    position: absolute;
+	top:15px;
+	transform:rotate(-90deg);
+	-webkit-transform:rotate(-90deg);
+	-moz-transform:rotate(-90deg);
+
+}
+.secondaryLeftMenu{
+    left: 50px;
+}
+
+
+.secondaryRightMenu:before{
+	border-bottom: 7px solid rgba(0, 0, 0, 0.7);
+    border-right: 7px solid transparent;
+    border-left: 7px solid transparent;
+    right: -11px;
+    content: '';
+    display: block;
+    position: absolute;
+	top:15px;
+	transform:rotate(90deg);
+	-webkit-transform:rotate(90deg);
+	-moz-transform:rotate(90deg);
+}
+.secondaryRightMenu{
+    right: 50px;
+}
+
+
+.secondaryBottomMenu:before{
+	border-bottom: 7px solid rgba(0, 0, 0, 0.7);
+    border-right: 7px solid transparent;
+    border-left: 7px solid transparent;
+    left: 11px;
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -7px;
+    transform: rotate(180deg);
+	-webkit-transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+}
+.secondaryBottomMenu{
+    bottom: 50px;
+}
+
+
+.tooltip {
+    text-align: center;
+    font-weight: 500;
+    color: #FFFFFF;
+    background-color: rgba(0, 0, 0, 0.7);
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height: 15px;
+    white-space: nowrap;
+    margin-top: 10px;
+    position: absolute;
+    padding: 5px 5px;
+	display : none;
+	border-radius: 4px;
+	border-style: solid;
+	border-width: 1px;
+	border-color:  #666666;
+	box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.4);
+	-webkit-box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.4);
+	-moz-box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.4);
+}
+
+
+.toolTipTop:before {
+    border-bottom: 5px solid rgba(0, 0, 0, 0.7);
+    border-right: 4.5px solid transparent;
+    border-left: 4.5px solid transparent;
+    top: -5px;
+	left: 10px;
+    content: '';
+    display: block;
+    position: absolute;
+}
+
+.toolTipTop {
+    top: 40px;
+}
+
+.toolTipLeft:before {
+    border-bottom: 5px solid rgba(0, 0, 0, 0.7);
+    border-right: 4.5px solid transparent;
+    border-left: 4.5px solid transparent;
+    top: 9px;
+	left: -8px;
+    content: '';
+    display: block;
+    position: absolute;
+	transform:rotate(-90deg);
+	-webkit-transform:rotate(-90deg);
+	-moz-transform:rotate(-90deg);
+}
+
+.toolTipLeft {
+    left: 45px;
+}
+
+.toolTipRight:before {
+    border-bottom: 5px solid rgba(0, 0, 0, 0.7);
+    border-right: 4.5px solid transparent;
+    border-left: 4.5px solid transparent;
+    top: 9px;
+	right: -8px;
+    content: '';
+    display: block;
+    position: absolute;
+	transform:rotate(90deg);
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+}
+
+.toolTipRight{
+    right: 45px;
+}
+
+.toolTipBottom:before {
+    border-bottom: 5px solid rgba(0, 0, 0, 0.7);
+    border-right: 4.5px solid transparent;
+    border-left: 4.5px solid transparent;
+    bottom: -6px;
+    left: 12px;
+    content: '';
+    display: block;
+    position: absolute;
+    transform: rotate(180deg);
+	-webkit-transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+}
+
+.toolTipBottom{
+    bottom: 45px;
+}
+
+.clipboard{
+	background-image:url('../resources/images/icon_clipboard.png');
+}
+.usb{
+	background-image:url('../resources/images/icon_usb.png');
+}
+.fileUpload{
+	background-image:url('../resources/images/icon_upload.png');
+}
+.fileDownload{
+	background-image:url('../resources/images/icon_download.png');
+}
+.fullscreen{
+	background-image:url('../resources/images/ico_fullscreen.png');
+}
+.windowRestore{
+	background-image:url('../resources/images/ico_fullScreen_restore.png');
+}
+.multimonitor{
+	background-image:url('../resources/images/ico_multimonitor.png');
+}
+.lock{
+	background-image:url('../resources/images/icon_cad.png');
+}
+.keyboard{
+	background-image:url('../resources/images/icon_keyboard.png');
+}
+
+.multitouch{
+	background-image:url('../resources/images/ico_multitouchMode.png');
+}
+
+.panmode{
+	background-image:url('../resources/images/ico_panMode.png');
+}
+
+.more{
+	background-image:url('../resources/images/ico_more.png');
+}
+.switchApp{
+	background-image:url('../resources/images/ico_app_switch.png');
+}
+.toolbarLines{
+	background-color: #ffffff;
+    width: 12px;
+    height: 1px;
+    margin-bottom: 2px;
+    position: relative;
+    top: 9px;
+    left: 14px;
+    display: block;
+}
+
+.halfToolbarIconLeft{
+	transform:rotate(90deg);
+	-webkit-transform:rotate(90deg);
+	-moz-transform:rotate(90deg);
+}
+
+.halfToolbarIconRight{
+	transform:rotate(-90deg);
+	-webkit-transform:rotate(-90deg);
+	-moz-transform:rotate(-90deg);
+}
+
+
+.halfToolbarIconBottom{
+	transform:rotate(0deg);
+	-webkit-transform:rotate(0deg);
+	-moz-transform:rotate(0deg);
+}
+
+.halfToolbarIconTop{
+  transform:rotate(180deg);
+ -webkit-transform:rotate(180deg);
+  -moz-transform:rotate(180deg);
+}
+
+
+.halfToolbarIcon{
+	height: 20px;
+    width: 40px;
+    border-radius: 40px 40px 0 0;
+    -moz-border-radius: 90px 90px 0 0;
+    -webkit-border-radius: 40px 40px 0 0;    
+	background-position : -9999px;
+}
+.autoKeyboardBtn{
+	position : absolute;
+	z-index : 12;
+	background-image : url("../resources/images/icon_keyboard.png");
+	background-repeat :  no-repeat;	
+}
+
+/* DesktopAppSwitcher styles*/
+.desktopAppSwitcher{
+	position: absolute;
+	top : 0px;
+	left : 0px;
+	width : 100%;
+	height : 100%;
+	overflow : hidden;
+	font-size : 14px;
+}
+.desktopAppSwitcherContainer{
+	white-space: nowrap;
+	position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 50px;
+    background-color: black;/*rgba(100,100,100,0.6);*/
+	z-index:11;
+	overflow : hidden;
+}
+
+.desktopAppSwitcherDiv{
+	overflow-y:hidden;	
+	overflow-x : auto;
+}
+
+.desktopAppSwitcherLeftScrollDiv{
+	width: 20px;
+	height: 50px;
+	background-color: rgba(50,50,50,1);
+	position: absolute;
+	display:none;
+	z-index:1;
+}
+
+.desktopAppSwitcherRightScrollDiv{
+	width: 20px;
+	height: 50px;
+	background-color: rgba(50,50,50,1);
+	position: absolute;
+	right: 0px;
+	display:none;
+	z-index:1;
+}
+
+.desktopAppSwitcherEntry{
+	display : inline-block;
+	max-width: 200px;
+	min-width : 64px;
+	height: 50px;
+	background-color: rgba(100,100,100,0.2);
+	margin-left : 5px;
+}
+.desktopAppSwitcherEntryChecked{
+	background-color: rgba(150,150,150,0.8);
+}
+
+.desktopAppSwitcherIcon{
+	width: 32px;
+    height: 32px;
+    float: left;
+    margin-left: 5px;
+    margin-top: 8px;
+    margin-bottom: 17px;
+}
+.desktopAppSwitcherIconOnly{
+	margin-left : 16px;	
+}
+.desktopAppSwitcherName{
+	color:white;
+	word-break: break-all;
+	margin-left: 45px;
+	margin-top: 16px;
+	width: 150px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.desktopAppSwitcherArrowLeft{
+	background : url("../resources/images/arrow_left.png") #323232 no-repeat center;
+}
+
+.desktopAppSwitcherArrowRight{
+	background : url("../resources/images/arrow_right.png") #323232 no-repeat center;
+}
+
+.desktopAppSwitcherContextMenu{   
+    position: absolute;
+    bottom: 55px;
+    left: 100px;    
+	display : none;
+	background-color: rgba(87, 79, 91, 0.97);
+    color: white;
+	z-index : 13;
+}
+.desktopAppSwitcherContextMenuOption{
+	padding: 9px 10px 6px 10px;
+    background-color: rgba(87, 79, 91, 0.97);
+}
+/*For labels under each context menu option*/
+.desktopAppSwitcherContextMenuOption label{
+	position : relative;
+	top : -2px;
+	padding: 0px 5px 0px 5px;
+}
+
+.desktopAppSwitcherAutoHideDiv{
+    height: 4px;
+    width: 100%;
+    position: absolute;
+    bottom: 3px;
+    z-index: 11;
+	display:none;
+}
+
+/* MobileAppSwitcher styles*/
+.mobileAppSwitcherOverlay{
+	width: 800px;
+    height: 600px;
+    top: 50%;
+    left: 50%;
+    margin-left: -400px;
+    margin-top: -300px;
+}
+
+.mobileAppSwitcherOverlayCommon{
+	position: absolute;
+    background-color: #ffffff;
+    cursor: default;
+    overflow: hidden;
+    z-index: 14;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    margin: auto;
+    min-width: 300px;
+    max-width: 100%;
+    min-height: 100px;
+    max-height: 100%;
+    overflow: hidden;
+}
+
+.mobileAppSwitcherContainer{
+	overflow:hidden;
+}
+
+.mobileAppSwitcherContainerParent {
+    max-width: 800px;
+	min-width:100%;
+    height: auto;
+    position: absolute;
+    top: 50px;
+    left: 0px;
+    bottom: 50px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.mobileAppSwitcherHeader{
+	width: 100%;
+    height: 50px;
+    background-color: #574f5b;
+    text-align: center;
+}
+
+.mobileAppSwitcherHeaderTitle{
+	color: white;
+    font-size: 20px;
+    font-weight: 600;
+    top: 15px;
+    line-height: 20px;
+    position: relative;
+}
+
+.mobileAppSwitcherCloseButton{
+	background-image: url("../resources/images/icon_close.png");
+    width: 17px;
+    height: 16px;
+    float: right;
+    position: absolute;
+    /* margin: 20px 20px 0px 0px; */
+    right: 20px;
+    top: 20px;
+}
+
+.mobileAppSwitcherCloseButton:focus{
+  opacity:0.25;
+}
+
+.mobileAppSwitcherCloseButton:hover{
+  opacity:0.25;
+}
+
+.mobileAppSwitcherCloseButton:active{
+  opacity:0.35;
+}
+
+.mobileAppSwitcherEntry{
+	width: 150px;
+    height: 150px;
+    display: inline-table;
+    font-size: 16px;
+    text-align: center;
+    margin: 5px;
+	background: -webkit-radial-gradient(center,circle, rgba(181, 164, 164, 0.11) 0%,rgba(195, 168, 168, 0.38) 100%) ;
+	background: -moz-radial-gradient(center,circle, rgba(181, 164, 164, 0.11) 0%,rgba(195, 168, 168, 0.38) 100%);
+	background: -ms-radial-gradient(center,circle, rgba(181, 164, 164, 0.11) 0%,rgba(195, 168, 168, 0.38) 100%);
+}
+
+.mobileAppSwitcherEntryChecked{
+	   /* background: -webkit-radial-gradient(center,circle, rgba(156, 141, 141, 0.11) 0%,rgba(105, 104, 104, 0.73) 100%);*/
+	       border: 2px solid rgba(150,150,150,1);
+}
+
+.mobileAppSwitcherIcon{
+	width: 32px;
+	height: 32px;
+	margin: auto;
+	margin-top: 35px;
+}
+
+.mobileAppSwitcherName{
+	font-size: 14px;
+    line-height: 18px;
+    color: black;
+    margin-top: 20px;
+    max-height: 66px;
+    width: 130px;
+    overflow-y: auto;
+    word-break: break-all;
+	margin-left : 10px;
+}
+
+.mobileAppSwitcherBackground{
+	width: 100%;
+	height: 100%;
+    background: rgba(0,0,0,0.8);
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index : 13;
+	display:none;
+}
+/* AppSwitcher common and responsive styles */
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.appSwitcherToggleContainer{
+	min-width: 100px;
+    position: absolute;
+    right: 24px;
+	bottom: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 18px;
+    height: 30px;
+}
+
+.appSwitcherToggleLabel{
+	color:#000000;
+	opacity : 0.8;
+	position: relative;
+	top : -1px;
+}
+
+.appSwitcherToggleCheckbox:checked + .appSwitcherToggleLabel{
+	color:#111111;
+	opacity : 1.0;
+}
+
+.appSwitcherRadio{
+	display:none;
+}
+
+/*Preferences dialog*/
+.preferencesDialog{
+	z-index : 9;
+	display : none;
+	position : absolute;
+	top : 0px;
+	left : 0px;
+	width : 100%;
+	height : 100%;
+}
+.prefsInnerContainer{
+	width: 100%;
+    max-width: 396px;
+    min-height: 150px;
+    max-height: 216px;
+    background-color: rgba(87, 79, 91, 0.97);
+    position: absolute;
+    margin: auto;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    color: white;	
+}
+
+.chromePrefsInnerContainer{
+	max-height: 175px;
+}
+
+.preferencesDialogHeader{
+	color: #FFFFFF;
+	font-size : 16px;
+	display: inline-block;
+    margin: 20px;
+}
+.autoKbdCheckBoxContainer{
+	margin : 0px 20px 0px 20px;
+}
+ .ceipCheckBoxContainer{
+	margin : 1px 20px 0px 20px;
+}
+.preferenceDialogCheckBox{
+	
+}
+.preferenceDialogCheckBoxLabel{
+	font-size : 12px;
+	color : #FFF;
+	position: relative;
+	top: -2px;
+	left: 5px;
+	line-height : 14px;
+}
+
+.displayResolutionBtn{
+	background-color: #02A1C1;
+	height: 44px;
+	min-width: 200px;
+	text-align: center;
+	font-size: 14px;
+	color: #FFF;
+	font-weight: 400;
+	margin: 20px;
+}
+
+.displayResolutionBtn:disabled {
+    background-color: rgba(2,161,193,0.6);
+    color: rgba(255,255,255,0.6);
+	opacity : 0.6;
+}
+
+/*Display resolution dialog*/
+.displayResolutionDialog{
+	z-index : 9;
+	display : none;
+	position : absolute;
+	top: 0px;
+	right: 10px;
+	width : 200px;	
+	background-color: rgba(87, 79, 91, 0.97);
+	color : #FFF;
+	padding-bottom: 22px;
+}
+.displayResolutionTitle{
+	font-size: 16px;
+    color: #FFF;
+    border-bottom: 2px solid #FFF;
+    line-height: 16px;
+    padding: 20px 0px 14px 0px;
+    margin: 0px 14px 0px 14px;
+}
+.displayResolutionEntry{
+	border-bottom : 1px solid #FFF;
+	min-height : 44px;
+	margin : 0px 14px 0px 14px;
+}
+.displayResolutionRadio{
+	display : none;
+}
+/*Custom radio button in display resolution dialog*/
+.dpRadioOuterCircle{
+	width: 14px;
+	height: 14px;
+	border-radius: 50%;
+	border: 1px solid #FFF;
+	margin: 15px 0px 0px 0px;
+	display: inline-block;
+	float : left;
+}
+.dpRadioInnerCircle{
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background-color: #FFF;
+	position: relative;
+	left: 2px;
+	top: 2px;
+	display:none;
+}
+
+.dpFixedRadiolabel{
+	color:#FFF;
+	font-size : 12px;
+	display : inline-block;
+	width: 150px;
+	float : right;
+	margin : 16px 0px 5px 0px;
+}
+/*Showing the pixel values for auto-fit screen and dpr*/
+.dpChangingRadiolabel{
+	color:#FFF;
+	font-size : 12px;	
+	display : inline-block;
+	width: 150px;
+	float : right;
+	margin : 9px 0px 5px 0px;
+}
+.dpResolutionValue{
+	margin : 0px 0px 5px 22px;
+    font-size: 10px;
+    color: #FFF;
+}
+
+/*Gesture Guide Dialog*/
+.gestureGuideDialog{
+    position : absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -125px;
+    margin-top: -135px;
+    width: 250px;  
+    border-radius: 12px;
+    border: 1px solid #666666;
+    background-color: rgba(0, 0, 0, 0.7);
+    -webkit-box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.4);
+	-moz-box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.4);
+    z-index : 9;
+	display : none;
+}
+
+.gestureGuideTitle{
+    position: relative;
+    color:  #ffffff;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: left;
+    margin: 10px ;
+}
+.gestureGuideElement{
+    min-height: 50px;
+    clear: both;
+}
+
+.gestureGuideMainText{
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 400;
+    text-align: left;
+    display: inline-block;
+    max-width: 190px;
+    margin: 10px 0px 5px 0px;
+    line-height: 16px;
+}
+.gestureGuideBoldText{
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 16px;
+    display: inline-block;
+}
+.scrollIcon{
+	background: url("../resources/images/gesture_guide_scroll_icon.png") no-repeat center;
+    width: 27px;
+    height: 37px;
+    background-size: 27px 37px;
+    display: inline-block;
+    float: left;
+    margin: 7px 10px 0px 15px;
+}
+.fingerPointerIcon{
+	background: url("../resources/images/gesture_guide_twoFingersTap.png") no-repeat center;
+    width: 27px;
+    height: 37px;
+    background-size: 27px 37px;
+    display: inline-block;
+    float: left;
+    margin: 7px 10px 0px 15px;
+}
+
+.keyboardIcon{
+	background: url("../resources/images/gesture_guide_threeFingersTap.png") no-repeat center;
+    width: 27px;
+    height: 37px;
+    background-size: 27px 37px;
+    display: inline-block;
+    float: left;
+    margin: 7px 10px 0px 15px;
+}
+.gesturGuideOkBtn{
+    color:  #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    margin: 10px 0px 10px 0px;   
+    clear: both;   
+}
+.borderBottom{
+    border-bottom: 1px solid #666666;
+}
+
+/*multitouch and mouse cursor popover message */
+.mobilePopOverElement{
+    text-align: center;
+    z-index: 8;
+    width: 100%;
+    bottom: 60px;
+    position: absolute;
+}
+.mobilePopOverText{
+    padding: 15px;
+    background-color: rgba(63, 54, 67, 0.9);
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 12px;
+    opacity: 0;
+}
+
+
+/* mouse cursor image on touch device*/
+.mousePointer{
+     display : none;
+     position : absolute;
+     z-index : 8;
+}
+/*Clipboard dialog styles*/
+.clipboardDialog{
+    position: absolute;
+    min-height: 350px;
+    z-index: 12;
+    background-color: rgba(87, 79, 91, 0.97);
+    color : #ffffff;
+    display: none;
+    overflow:hidden;
+    left:50%;
+    top:50%;
+    margin-left: -250px;
+    margin-top : -175px;
+    width : 500px;
+}
+/*Common class for the popover message in the clipboard*/
+.popover{
+	padding : 18px 0px 17px 0px;   
+	text-align: center;
+	background-color:  rgba(63, 54, 67, 0.9);
+	width:275px;
+	color: #FFFFFF;
+	font-size: 16px;
+	font-weight:400;
+	line-height:16px;
+	display: inline-block;
+	position: absolute;
+    top:50%;
+    left:50%;
+    margin : -12px 0px 0px -140px;
+	opacity:0;
+}
+.clipboardHelpBtn{
+    display : inline;
+	position : absolute;
+	top : 13px;
+	right : 45px;
+	background-color : transparent;
+	color : #cfcfcf;
+	font-size : 22px;
+}
+.clipboardTitle{
+    color : #ffffff;
+    margin : 20px 70px 20px 20px;
+    line-height: 20px;
+    font-size: 14px;
+}
+.clipboardHelpText:before {
+    border-bottom: 5px solid rgba(0, 0, 0, 0.7);
+    border-right: 4.5px solid transparent;
+    border-left: 4.5px solid transparent;
+    top: -5px;
+	right: 10px;
+    content: '';
+    display: block;
+    position: absolute;
+}
+.clipboardHelpText{    
+    font-weight: 500;
+    color: #FFFFFF;
+    background-color: rgba(0, 0, 0, 0.99);
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height: 18px;    
+    padding: 10px;
+	display : none;
+	border-radius: 4px;	
+    border : 1px solid #666666;
+	box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.4);
+	-webkit-box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.4);
+	-moz-box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: 35px;
+    right: 42px;
+    margin: 10px 0px 0px 10px;
+}
+.touchOSClipboardMsg{
+    font-size: 12px;
+}
+
+.clipboardContentArea{
+    resize: none;
+    outline: none;
+    padding: 0px;
+    border: 0px;
+    width:100%;
+    height: 250px;
+}
+.clipboardUpdateBtn:disabled{
+	opacity :0.2;
+}
+
+.clipboardUpdateBtn{
+    color : #ffffff;
+    background-color : #02a1c1;
+    min-width : 80px;
+    height : 32px;
+    float : right;
+    margin : 10px 20px 10px 0px;
+	opacity : 1.0;
+}
+/*Responsive UI styles for clipboard dialog*/
+@media only screen and (max-width:502px){
+    .clipboardDialog{
+        max-width: 100%;
+        top:0px;
+        left:0px;
+        bottom:0px;
+        right:0px;
+        margin : auto;            
+        width: auto;
+        height: auto;
+        max-height :360px;
+    }
+}
+
+@media only screen and (max-height : 320px){
+     .clipboardDialog{
+        max-width: 100%;
+        top:0px;
+        left:0px;
+        bottom:0px;
+        right:0px;
+        margin : auto;            
+        width: auto;
+        min-height: 100%;
+    }
+     .clipboardContentArea{
+       height: 180px;       
+    }
+    .popover{
+        margin : -50px 0px 0px -140px;
+    }
+}
+
+@media only screen and (min-height:321px) and (max-height : 360px){
+    .clipboardContentArea{
+       height: 200px;       
+    }
+    .popover{
+        margin : -50px 0px 0px -140px;
+    }
+}
+
+@media only screen and (max-width:380px){
+	.prefsInnerContainer{
+		max-height : 220px;
+	}
+}
+/*Net promoters*/
+.ratingDialog{
+	width: 300px;
+    min-height: 150px;    
+	position : absolute;
+	top : 50%;
+	left : 50%;
+	margin : -150px 0px 0px -150px;
+	background-color : #ffffff;
+	z-index : 10;	
+	border : 1px rgba(0,0,0,0.28) solid;
+	box-shadow: 3px 6px 7px 0px rgba(0, 0, 0, 0.1);
+}
+.ratingReceiverIcon{	
+    height: 48px;
+    width: 100%;
+	background : url("../ChromeAppUI/resources/images/icon_48x48.png") center no-repeat;
+	margin: 20px 0px 10px 0px;
+}
+.ratingDialogTitle{
+	font-size: 16px;
+    margin: 5px;
+	text-align : center;
+}
+.ratingsStarDiv{
+	width: 100%;
+    text-align: center;
+    margin: 10px 0px 10px 0px;
+}
+.ratingStar{
+	width: 48px;
+    height: 48px;
+    background-size: 48px 48px;
+    background-image: url("../ChromeAppUI/resources/images/grey-star.png");
+    display: inline-block;	
+}
+
+.rateLaterBtn{
+	float: right;
+    font-size: 12px;
+    background-color: transparent;
+    font-weight: 600;
+	margin : 10px 10px 0px 0px;
+}
+.ratingCloseBtn{
+	display : none;
+	background-color: #bbbbbb;
+    color: white;
+    margin:10px 15px 20px 0px;
+	float : right;
+	font-size : 14px;
+	width : 130px;
+	min-height : 44px;
+}
+.rateInStoreBtn{
+	display : none;
+	background-color: #02a1c1;
+    color: white;
+    margin:10px 10px 20px 0px;
+	float : right;
+	font-size : 14px;
+	width : 130px;
+	min-height : 44px;
+}
+.sendFeedbackBtn{
+	display : none;
+	background-color: #02a1c1;
+    color: white;
+    margin:10px 10px 20px 0px;
+	float : right;
+	font-size : 14px;
+	width : 130px;
+	min-height : 44px;
+}
+.aboutDialog{
+	width: 300px;
+    height: 280px;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -140px 0px 0px -150px;
+    z-index: 8;
+	border:1px rgba(0,0,0,0.28) solid;
+}
+.aboutCtxRxIcon{
+	clear: both;
+    width: 100%;
+    height: 54px;
+    background: url("../resources/images/logotype_CitrixReceiver.png") no-repeat center center;
+    margin: 16px 0px 30px 0px;
+}
+
+.abtTPNotices{
+	font-size: 20px;
+    color: black;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.abtRxName{
+	color: #02a1c1;
+    font-size: 16px;
+    line-height: 15px;
+    margin-bottom: 8px;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+}
+.rxVersion{
+	font-size : 12px;
+	text-align : center;
+}
+.abtCopyRightMsg{
+	text-align: center;
+    margin: 20px 0px 0px 0px;
+	font-size : 12px;
+}
+.abtAllRightsReservedMsg{
+	text-align: center;
+	font-size : 12px;	
+}
+/*Closes the window , button added during seamless app launch to citrixuiElement*/
+#connectionCloseBtn{
+	background-image : url("/resources/images/icon_close.png");
+	position : absolute;
+	width : 17px;
+	height : 16px;
+	z-index : 20;
+}
+html{
+	background-color :  black;
+}
+#appViewPrintDiv{
+	position :absolute;
+	top : 0px;
+	left : 0px;
+	width : 100%;
+	height : 100%;
+	z-index : 15;
+}
+#printWebview{	
+	position :absolute;
+	top : 0px;
+	left : 0px;
+	width : 100%;
+	height : 100%;
+}
