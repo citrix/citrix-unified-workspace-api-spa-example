@@ -1,8 +1,7 @@
-/*
-* Copyright © 2023. Cloud Software Group, Inc.
-* This file is subject to the license terms contained
-* in the license file that is distributed with this file.
-*/
+// Copyright © 2023. Cloud Software Group, Inc. All Rights Reserved.
+
+// In a production service, this should this should be pulled in from another source, such as a configuration file, environment variable, or other secure location
+const APPLICATION_ID = ""
 
 // Creates an axios instance for calling the Citrix API that handles retrieving tokens
 function CreateApiHandler(baseUrl, tmsBaseUrl, requestVerifyToken) {
@@ -44,6 +43,7 @@ function CreateApiHandler(baseUrl, tmsBaseUrl, requestVerifyToken) {
     // Interceptor for retrieving and adding token to Auth header
     axiosInstance.interceptors.request.use(async function (config) {
         const token = await RetrieveToken()
+        config.headers["Citrix-ApplicationId"] = APPLICATION_ID
         if (token) {
             config.headers["Authorization"] = "Bearer " + token
         }
@@ -100,7 +100,7 @@ window.addEventListener('load', async () => {
 })
 
 let launching = false
-async function PerformLaunch(card, launchUrl) {
+async function PerformLaunch(card, resourceLinks) {
     if (launching) {
         return;
     }
@@ -108,14 +108,78 @@ async function PerformLaunch(card, launchUrl) {
     try {
         $(card).children(".loader").addClass('active')
         launching = true;
+        const resourceLinks = card.dataset
         
-        let launchTicketResponse = await apiHandler.post(launchUrl)
-
-        let receiverUri = launchTicketResponse.data.receiverUri
-        window.open(receiverUri, "Launching...")
+        const launchType = document.getElementById('launch-type').value
+        switch (launchType) {
+            case "Receiver": {
+                await launchReceiver(resourceLinks.launchstatus)
+                break;
+            }
+            case "HTML5": {
+                await launchHTML5(resourceLinks.launchica)
+                break;
+            }
+            case "IFrame": {
+                await launchIFrame(resourceLinks.launchica)
+                break;
+            }
+        }
+        
     }
     finally {
         launching = false;
         $(card).children(".loader").removeClass('active')
     }
+}
+
+async function launchReceiver(launchUrl) {
+    let launchTicketResponse = await apiHandler.post(launchUrl)
+
+    let receiverUri = launchTicketResponse.data.receiverUri
+    window.open(receiverUri, "Launching...")
+}
+
+async function launchHTML5(launchUrl) {
+    citrix.receiver.setPath("https://localhost:7183/receiver"); 
+    let icaFile = await apiHandler.get(launchUrl)
+    const sessionId = "html5"
+    const connectionParams = {
+        "launchType": "newtab",
+        "container": {
+            "type": "window"
+        }
+    };
+
+    function sessionCreated(sessionObject){
+        const launchData = {"type": "ini", value: icaFile.data};
+        sessionObject.start(launchData);
+    }
+    citrix.receiver.createSession(sessionId, connectionParams,sessionCreated);
+}
+async function launchIFrame(launchUrl) {
+    citrix.receiver.setPath("https://localhost:7183/receiver"); 
+    let icaFile = await apiHandler.get(launchUrl)
+    const id = "iframe"
+    const connectionParams = {
+        "launchType": "embed",
+        "container": {
+            "type": "iframe",
+            "id": "sessionIframe"
+        }
+    };
+    
+    document.getElementById("sessionIframe").style.display = "block";
+
+    function sessionCreated(sessionObject){
+        function connectionClosedHandler(event){
+            document.getElementById("sessionIframe").style.display = "none";
+        }
+        sessionObject.addListener("onConnectionClosed",connectionClosedHandler);
+
+
+        const launchData = {"type": "ini", value: icaFile.data};
+        sessionObject.start(launchData);
+    }
+    citrix.receiver.createSession(id, connectionParams,sessionCreated);
 }
