@@ -1,0 +1,160 @@
+/*Copyright (c) 2014 Citrix Systems, Inc.
+The materials in this file are protected by copyright and other intellectual property laws.
+Copying and use is permitted only by end users to enable use of Citrix server technology.
+Any other reproduction or use of this file, or any portion of it, is unlicensed.
+In no event may the file be reverse engineered or may copies be made in association with deobfuscation, decompilation or disassembly.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.*/
+
+/*
+font file for citrixsans light is taken from https://s3.amazonaws.com/citrix-cdn/can.cdn/marketing/assets/fonts/citrix-sans/citrixsans-light.eot 
+similarly other font file are taken from the link https://s3.amazonaws.com/citrix-cdn/can.cdn/marketing/assets/fonts/citrix-sans/[file-name]
+font-weight is taken from the following link- https://s3.amazonaws.com/citrix-cdn/can.cdn/marketing/assets/fonts/citrix-fonts-linking.css
+*/
+@font-face{
+	font-family:"citrixsans";
+	font-style: normal;
+	font-weight: 400;
+	src:url("../resources/fonts/citrixsans/citrixsans-regular.eot");
+	src:url("../resources/fonts/citrixsans/citrixsans-regular.eot?") format('eot'),
+		url("../resources/fonts/citrixsans/citrixsans-regular.woff") format("woff"),
+		url("../resources/fonts/citrixsans/citrixsans-regular.ttf") format("truetype"),
+		url("../resources/fonts/citrixsans/citrixsans-regular.svg#7816f72f-f47e-4715-8cd7-960e3723846a") format("svg");
+}
+
+@font-face{
+	font-family:"citrixsans";
+	font-style: normal;
+	font-weight: 700;
+	 src:url("../resources/fonts/citrixsans/citrixsans-bold.eot");
+	 src:url("../resources/fonts/citrixsans/citrixsans-bold.eot?") format('eot'),
+		url("../resources/fonts/citrixsans/citrixsans-bold.woff") format("woff"),
+		url("../resources/fonts/citrixsans/citrixsans-bold.ttf") format("truetype"),
+		url("../resources/fonts/citrixsans/citrixsans-bold.svg#7816f72f-f47e-4715-8cd7-960e3723846a") format("svg"); 
+}
+
+@font-face{
+	font-family:"citrixsans";
+	font-style: italic;
+	font-weight: 700;
+	src:url("../resources/fonts/citrixsans/citrixsans-bolditalic.eot");
+	src:url("../resources/fonts/citrixsans/citrixsans-bolditalic.eot?") format('eot'),
+		url("../resources/fonts/citrixsans/citrixsans-bolditalic.woff") format("woff"),
+		url("../resources/fonts/citrixsans/citrixsans-bolditalic.ttf") format("truetype"),
+		url("../resources/fonts/citrixsans/citrixsans-bolditalic.svg#7816f72f-f47e-4715-8cd7-960e3723846a") format("svg");
+}
+
+@font-face{
+	font-family:"citrixsans";
+	font-style: italic;
+	font-weight: 400;
+	src:url("../resources/fonts/citrixsans/citrixsans-italic.eot");
+	src:url("../resources/fonts/citrixsans/citrixsans-italic.eot?") format('eot'),
+		url("../resources/fonts/citrixsans/citrixsans-italic.woff") format("woff"),
+		url("../resources/fonts/citrixsans/citrixsans-italic.ttf") format("truetype"),
+		url("../resources/fonts/citrixsans/citrixsans-italic.svg#7816f72f-f47e-4715-8cd7-960e3723846a") format("svg");
+}
+
+@font-face{
+	font-family:"citrixsans";
+	font-style: normal;
+	font-weight: 200;
+	src:url("../resources/fonts/citrixsans/citrixsans-light.eot");
+	src:url("../resources/fonts/citrixsans/citrixsans-light.eot?") format('eot'),
+		url("../resources/fonts/citrixsans/citrixsans-light.woff") format("woff"),
+		url("../resources/fonts/citrixsans/citrixsans-light.ttf") format("truetype"),
+		url("../resources/fonts/citrixsans/citrixsans-light.svg#7816f72f-f47e-4715-8cd7-960e3723846a") format("svg");
+}
+
+@font-face{
+	font-family:"citrixsans";
+	font-style: italic;
+	font-weight: 200;
+	src:url("../resources/fonts/citrixsans/citrixsans-lightitalic.eot");
+	src:url("../resources/fonts/citrixsans/citrixsans-lightitalic.eot?") format('eot'),
+		url("../resources/fonts/citrixsans/citrixsans-lightitalic.woff") format("woff"),
+		url("../resources/fonts/citrixsans/citrixsans-lightitalic.ttf") format("truetype"),
+		url("../resources/fonts/citrixsans/citrixsans-lightitalic.svg#7816f72f-f47e-4715-8cd7-960e3723846a") format("svg");
+}
+
+@font-face{
+	font-family:"citrixsans";
+	font-style: normal;
+	font-weight: 600;
+	src:url("../resources/fonts/citrixsans/citrixsans-semibold.eot");
+	src:url("../resources/fonts/citrixsans/citrixsans-semibold.eot?") format('eot'),
+		url("../resources/fonts/citrixsans/citrixsans-semibold.woff") format("woff"),
+		url("../resources/fonts/citrixsans/citrixsans-semibold.ttf") format("truetype"),
+		url("../resources/fonts/citrixsans/citrixsans-semibold.svg#7816f72f-f47e-4715-8cd7-960e3723846a") format("svg");
+}
+
+@font-face{
+	font-family:"citrixsans";
+	font-style: italic;
+	font-weight: 600;
+	src:url("../resources/fonts/citrixsans/citrixsans-semibolditalic.eot");
+	src:url("../resources/fonts/citrixsans/citrixsans-semibolditalic.eot?") format('eot'),
+		url("../resources/fonts/citrixsans/citrixsans-semibolditalic.woff") format("woff"),
+		url("../resources/fonts/citrixsans/citrixsans-semibolditalic.ttf") format("truetype"),
+		url("../resources/fonts/citrixsans/citrixsans-semibolditalic.svg#7816f72f-f47e-4715-8cd7-960e3723846a") format("svg");
+}
+body{
+	font-family: "Helvetica Neue", "Helvetica", "Arial", "Sans Serif" !important;
+}
+
+h1{			
+	font-weight: 200;
+	font-style: normal;
+	font-size: 40px;
+	line-height: 47px;
+	margin-bottom: 25px;
+	min-height: 0;
+}
+p{
+	font-weight: 400;
+	font-style: normal;
+	font-size: 16px;
+	line-height: 23px;
+	margin-bottom: 15px;
+	padding-bottom: 0!important;
+}
+
+h4 {
+	font-weight: 600;
+	font-style: normal;
+	font-size: 16px;
+	line-height: 23px;
+	margin-top: 0;
+	margin-bottom: 15px;
+}
+#TPLHeader{
+	background-color:#eeeeee;
+	height:100px;
+	width:100%;
+}
+#headerDiv{
+	height: 100px;
+	max-width: 960px;
+	margin: auto;
+}
+#TPLCitrixLogo{
+	width:132px;
+	height:54px;
+	margin-top:23px;
+}
+
+#TPLContent{
+	/* margin: 23px 100px 25px 100px;
+	max-width : 960px; */
+	display: table;
+	margin: auto;
+	color:black !important;
+}
+#TPLPage{
+	background-color :  #FFFFFF;
+	margin : 0px;
+}
+#containingDiv{
+	max-width: 960px;
+	display: table-cell;	
+	padding-top: 20px;
+}

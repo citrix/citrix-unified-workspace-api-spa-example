@@ -18,5 +18,8 @@
     <None Include="wwwroot\**\*" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\receiver\" />
+  </ItemGroup>
 
 </Project>
