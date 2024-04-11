@@ -37,6 +37,8 @@ This is because the SPA is configured to run on `https://localhost:7183`.
 
 The SPA code assumes that you are running the TMS on `https://localhost:7182` and if you want to change that, you'll need to update the code in [app.js](./Citrix.UnifiedApi.Test.SPA/wwwroot/js/app.js) and [index.html](./Citrix.UnifiedApi.Test.SPA/wwwroot/index.html).
 
+Before running the SPA example, you will need to set the Application ID at the top of [app.js](./Citrix.UnifiedApi.Test.SPA/wwwroot/js/app.js) to be the application ID for the OAuth client you have created in the Citrix Cloud Admin Console.
+
 ## Running the example
 
 The C# server provides the backend and hosts the html and javascript files, and also provides endpoints for performing authorization. See [Token Management Service](../Citrix.UnifiedApi.Test.TMS/README.md) for details on how the flow occurs.

@@ -1,5 +1,8 @@
 // Copyright © 2023. Cloud Software Group, Inc. All Rights Reserved.
 
+// In a production service, this should this should be pulled in from another source, such as a configuration file, environment variable, or other secure location
+const APPLICATION_ID = ""
+
 // Creates an axios instance for calling the Citrix API that handles retrieving tokens
 function CreateApiHandler(baseUrl, tmsBaseUrl, requestVerifyToken) {
     // access token and other details stored in memory within a private function
@@ -40,6 +43,7 @@ function CreateApiHandler(baseUrl, tmsBaseUrl, requestVerifyToken) {
     // Interceptor for retrieving and adding token to Auth header
     axiosInstance.interceptors.request.use(async function (config) {
         const token = await RetrieveToken()
+        config.headers["Citrix-ApplicationId"] = APPLICATION_ID
         if (token) {
             config.headers["Authorization"] = "Bearer " + token
         }
