@@ -21,7 +21,8 @@ To configure the Workspace OAuth Client settings - including secrets - use the d
 These settings will be related to OAuth clients created in the Citrix Cloud Admin Console - see [the documentation](https://developer-docs.citrix.com/en-us/workspace-platform/unified-workspace-api-preview/oauth-client-management) for details on how to create one.
 
 Example:
-json
+
+```json
 {
   "Client": {
     "ClientId": "clientId==",
@@ -32,6 +33,8 @@ json
     "UseOfflineAccess": true
   }
 }
+```
+
 - [Required] `ClientId`: The Client ID of the client. 
 - [Required] `ApplicationId`: The Application ID of the client.
 - [Optional] `ClientSecret`: The Client Secret of the client, shown after creating a private client. This is only needed if a private client was created.
