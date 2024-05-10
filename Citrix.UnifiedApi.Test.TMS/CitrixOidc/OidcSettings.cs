@@ -10,6 +10,8 @@ public record OidcSettings
 
     public string? ClientSecret { get; set; }
 
+    public string? ApplicationId { get; set; }
+
     public string? CallbackPath { get; set; } = "/callback";
 
     public Boolean UsePkce { get; set; } = true;
