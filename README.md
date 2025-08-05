@@ -13,7 +13,7 @@ This is purely an example and shouldn't be used for real production services.
 ## Prerequisites
 
 - You have either a Private or Public Workspace OAuth Client
-- You will be running the example code in Visual Studio and can run [.NET 7.0](https://dotnet.microsoft.com/en-us/download/dotnet/7.0)
+- You will be running the example code in Visual Studio and can run [.NET 9.0](https://dotnet.microsoft.com/en-us/download/dotnet/9.0)
 - You have the [Citrix Workspace App](https://www.citrix.com/downloads/workspace-app/windows/workspace-app-for-windows-latest.html) installed
 
 ## Getting Started

@@ -32,7 +32,7 @@ public class DiscoveryClient
 
             var uri = new UriBuilder(customerDomain)
             {
-                Path = $"/api/discovery/configurations",
+                Path = $"/citrixapi/discovery/configurations",
                 Scheme= "https",
                 Port= 443
             }.Uri;

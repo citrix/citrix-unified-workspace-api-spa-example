@@ -72,9 +72,9 @@ window.addEventListener('load', async () => {
         const sessionState = await axios.get(`${tmsBaseUrl}/Session/CheckSession`, { withCredentials: true })
         
         if (sessionState.data.isLoggedIn) {
-            apiHandler = CreateApiHandler(`https://${sessionState.data.workspaceDomain}/api`, tmsBaseUrl, sessionState.data.requestVerificationToken)
+            apiHandler = CreateApiHandler(`https://${sessionState.data.workspaceDomain}/citrixapi`, tmsBaseUrl, sessionState.data.requestVerificationToken)
 
-            let discoveryResponse = await apiHandler.get(`https://${sessionState.data.workspaceDomain}/api/discovery/configurations`)
+            let discoveryResponse = await apiHandler.get(`https://${sessionState.data.workspaceDomain}/citrixapi/discovery/configurations`)
 
             let resourcesListUrl = new URL(discoveryResponse.data.services.find(service => service.service === "store").endpoints.find(endpoint => endpoint.id === "ListResources").url)
 
