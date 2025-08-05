@@ -14,7 +14,7 @@ participant "Web Helper" as help
 == Logon ==
 browser -> spa : Load
 spa -> tms : GET /configuration
-tms -> wspapi : GET customer.cloud.com/api/discovery/configurations
+tms -> wspapi : GET https://{CUSTOMER_DOMAIN}/citrixapi/discovery/configurations
 tms <-- wspapi : Configurations document
 spa <-- tms : Configurations document
 spa -> tms : GET /accesstoken
@@ -35,38 +35,38 @@ tms -> spa : [Access Token 1] + authenticated session cookie
 
 == Request Resources ==
 browser -> spa : Get resources
-spa -> wspapi : GET customer.cloud.com/api/store/resources [Access Token 1]
+spa -> wspapi : GET https://{CUSTOMER_DOMAIN}/citrixapi/store/resources [Access Token 1]
 wspapi -> spa : Resource details
 spa -> browser : Display resources
 
 == Favorite Resource ==
 browser -> spa : Favorite resource
-spa -> wspapi : POST customer.cloud.com/api/store/resources/{resourceId}/$favorite [Access Token 1]
+spa -> wspapi : POST https://{CUSTOMER_DOMAIN}/citrixapi/store/resources/{resourceId}/$favorite [Access Token 1]
 opt Access Token expired
 spa <-- wspapi : 401 Unauthorized
 spa -> tms : GET /accesstoken
 tms -> athena : GET /core/connect/token
 athena --> tms : Access token
 tms --> spa : Access token
-spa -> wspapi : POST customer.cloud.com/api/store/resources/{resourceId}/$favorite [Access Token 2]
+spa -> wspapi : POST https://{CUSTOMER_DOMAIN}/citrixapi/store/resources/{resourceId}/$favorite [Access Token 2]
 end opt
 
 wspapi --> spa : 200 OK [Status]
 
 == Native HDX Launch (Protocol Handler) ==
 browser -> spa : Native Launch
-spa -> wspapi : POST customer.cloud.com/api/store/resources/{resourceId}/tickets\n [Access Token 2]
+spa -> wspapi : POST https://{CUSTOMER_DOMAIN}/citrixapi/store/resources/{resourceId}/tickets\n [Access Token 2]
 spa <-- wspapi : Ica Launch Ticket (Ica ticket url)
 spa -> spa : Extract launch url,\nrename protocol to receiver://{ticketurl}
 spa -> browser : Initiate protocol handler receiver://{ticketurl}
 browser -> help : Transfer ticket data
-help -> wspapi :  POST\n customer.cloud.com/api/store/client/icaFile\n [Body: Ticket]
+help -> wspapi :  POST\n https://{CUSTOMER_DOMAIN}/citrixapi/store/client/icaFile\n [Body: Ticket]
 wspapi -> help : Ica File
 help -> help : HDX Launch
 
 == Logoff ==
 browser -> spa : Logoff
-spa -> wspapi : POST customer.cloud.com/api/store/sessions/$logoff log off active sessions
+spa -> wspapi : POST https://{CUSTOMER_DOMAIN}/citrixapi/store/sessions/$logoff log off active sessions
 wspapi --> spa : 200 OK
 spa -> tms : GET /logoff
 tms -> tms : Validate session id and retrieve refresh-token
