@@ -1,4 +1,4 @@
-// Copyright © 2023. Cloud Software Group, Inc. All Rights Reserved.
+// Copyright © 2025. Cloud Software Group, Inc. All Rights Reserved.
 
 using Microsoft.AspNetCore.Authentication.OpenIdConnect;
 using Microsoft.IdentityModel.Protocols.OpenIdConnect;

@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Citrix.UnifiedApi.Test.SPA", "Citrix.UnifiedApi.Test.SPA\Citrix.UnifiedApi.Test.SPA.csproj", "{DCA50643-7FF6-45E7-9214-C5896D81643F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Citrix.UnifiedApi.Test.TMS", "Citrix.UnifiedApi.Test.TMS\Citrix.UnifiedApi.Test.TMS.csproj", "{EA97C9A9-02F5-4B91-9EDE-BD136EB25106}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{DCA50643-7FF6-45E7-9214-C5896D81643F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DCA50643-7FF6-45E7-9214-C5896D81643F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DCA50643-7FF6-45E7-9214-C5896D81643F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA97C9A9-02F5-4B91-9EDE-BD136EB25106}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA97C9A9-02F5-4B91-9EDE-BD136EB25106}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA97C9A9-02F5-4B91-9EDE-BD136EB25106}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA97C9A9-02F5-4B91-9EDE-BD136EB25106}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

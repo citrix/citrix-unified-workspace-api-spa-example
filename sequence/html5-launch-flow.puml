@@ -1,0 +1,33 @@
+@startuml "html5-launch"
+
+title Single Page Application (SPA) Html5 Launch Flow
+skinparam DefaultTextAlignment Center
+skinparam monochrome true
+autonumber
+participant "Html5 Tab" as tab 
+participant "Browser" as browser 
+participant "Single Page Application" as spa
+participant "Workspace API" as wspapi
+
+== Html5 ICA file launch flow ==
+browser -> spa : Ica Launch
+opt Tabbed launch
+tab <-- spa: Open target tab to associate action with click
+end opt
+spa -> wspapi : GET https://{CUSTOMER_DOMAIN}/citrixapi/store/resources/{resourceId}/iceFile\n [Access Token]
+spa <-- wspapi : ICA file
+alt Same tab launch
+spa -> browser : Set current tab location to generated launch Url
+else New tab launch
+spa -> tab : Set target tab location to generated launch Url
+end alt
+browser -> browser : Render html5 CWA in target
+browser -> browser : html5 launch
+spa -> spa : Parse ICA data
+opt Chrome App
+spa -> browser : Post ICA data to Chrome app
+else Non Chrome Launch
+browser -> browser : Get ICA data from global variable
+end opt
+
+@enduml

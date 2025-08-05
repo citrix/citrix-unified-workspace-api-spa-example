@@ -1,4 +1,4 @@
-// Copyright © 2023. Cloud Software Group, Inc. All Rights Reserved.
+// Copyright © 2025. Cloud Software Group, Inc. All Rights Reserved.
 
 // In a production service, this should this should be pulled in from another source, such as a configuration file, environment variable, or other secure location
 const APPLICATION_ID = ""
@@ -72,9 +72,9 @@ window.addEventListener('load', async () => {
         const sessionState = await axios.get(`${tmsBaseUrl}/Session/CheckSession`, { withCredentials: true })
         
         if (sessionState.data.isLoggedIn) {
-            apiHandler = CreateApiHandler(`https://${sessionState.data.workspaceDomain}/api`, tmsBaseUrl, sessionState.data.requestVerificationToken)
+            apiHandler = CreateApiHandler(`https://${sessionState.data.workspaceDomain}/citrixapi`, tmsBaseUrl, sessionState.data.requestVerificationToken)
 
-            let discoveryResponse = await apiHandler.get(`https://${sessionState.data.workspaceDomain}/api/discovery/configurations`)
+            let discoveryResponse = await apiHandler.get(`https://${sessionState.data.workspaceDomain}/citrixapi/discovery/configurations`)
 
             let resourcesListUrl = new URL(discoveryResponse.data.services.find(service => service.service === "store").endpoints.find(endpoint => endpoint.id === "ListResources").url)
 

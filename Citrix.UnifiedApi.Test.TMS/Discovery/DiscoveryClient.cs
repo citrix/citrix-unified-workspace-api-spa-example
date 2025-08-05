@@ -1,4 +1,4 @@
-// Copyright © 2023. Cloud Software Group, Inc. All Rights Reserved.
+// Copyright © 2025. Cloud Software Group, Inc. All Rights Reserved.
 
 using System.Net;
 
@@ -32,7 +32,7 @@ public class DiscoveryClient
 
             var uri = new UriBuilder(customerDomain)
             {
-                Path = $"/api/discovery/configurations",
+                Path = $"/citrixapi/discovery/configurations",
                 Scheme= "https",
                 Port= 443
             }.Uri;

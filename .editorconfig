@@ -27,7 +27,7 @@ insert_final_newline = false
 # Organize usings
 dotnet_separate_import_directive_groups = true
 dotnet_sort_system_directives_first = true
-file_header_template = Copyright © 2023. Cloud Software Group, Inc. All Rights Reserved.
+file_header_template = Copyright © 2025. Cloud Software Group, Inc. All Rights Reserved.
 
 # this. and Me. preferences
 dotnet_style_qualification_for_event = false:silent
