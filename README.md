@@ -127,4 +127,4 @@ The repo includes the following javascript libraries,
 
 ## License
 
-Copyright © 2023. Cloud Software Group, Inc. All Rights Reserved.
+Copyright © 2025. Cloud Software Group, Inc. All Rights Reserved.
