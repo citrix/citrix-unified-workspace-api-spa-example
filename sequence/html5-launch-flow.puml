@@ -14,7 +14,7 @@ browser -> spa : Ica Launch
 opt Tabbed launch
 tab <-- spa: Open target tab to associate action with click
 end opt
-spa -> wspapi : GET https://{CUSTOMER_DOMAIN}/citrixapi/store/resources/{resourceId}/iceFile\n [Access Token 2]
+spa -> wspapi : GET https://{CUSTOMER_DOMAIN}/citrixapi/store/resources/{resourceId}/iceFile\n [Access Token]
 spa <-- wspapi : ICA file
 alt Same tab launch
 spa -> browser : Set current tab location to generated launch Url
