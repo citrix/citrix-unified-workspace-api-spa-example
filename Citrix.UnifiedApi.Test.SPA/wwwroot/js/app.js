@@ -1,4 +1,4 @@
-// Copyright © 2025. Cloud Software Group, Inc. All Rights Reserved.
+// Copyright © 2026. Cloud Software Group, Inc. All Rights Reserved.
 
 // In a production service, this should this should be pulled in from another source, such as a configuration file, environment variable, or other secure location
 const APPLICATION_ID = ""
@@ -100,7 +100,7 @@ window.addEventListener('load', async () => {
 })
 
 let launching = false
-async function PerformLaunch(card, resourceLinks) {
+async function PerformLaunch(card) {
     if (launching) {
         return;
     }
@@ -113,15 +113,15 @@ async function PerformLaunch(card, resourceLinks) {
         const launchType = document.getElementById('launch-type').value
         switch (launchType) {
             case "Receiver": {
-                await launchReceiver(resourceLinks.launchstatus)
+                await launchReceiver(resourceLinks.icafilefetchticketurl)
                 break;
             }
             case "HTML5": {
-                await launchHTML5(resourceLinks.launchica)
+                await launchHTML5(resourceLinks.icafileurl)
                 break;
             }
             case "IFrame": {
-                await launchIFrame(resourceLinks.launchica)
+                await launchIFrame(resourceLinks.icafileurl)
                 break;
             }
         }
@@ -134,14 +134,16 @@ async function PerformLaunch(card, resourceLinks) {
 }
 
 async function launchReceiver(launchUrl) {
-    let launchTicketResponse = await apiHandler.post(launchUrl)
+    let launchTicketResponse = await apiHandler.get(launchUrl)
 
     let receiverUri = launchTicketResponse.data.receiverUri
     window.open(receiverUri, "Launching...")
 }
 
+// Keep reference to session object to prevent premature cleanup
+let html5SessionObject = null;
+
 async function launchHTML5(launchUrl) {
-    citrix.receiver.setPath("https://localhost:7183/receiver"); 
     let icaFile = await apiHandler.get(launchUrl)
     const sessionId = "html5"
     const connectionParams = {
@@ -152,13 +154,53 @@ async function launchHTML5(launchUrl) {
     };
 
     function sessionCreated(sessionObject){
-        const launchData = {"type": "ini", value: icaFile.data};
+        // Store session object reference to prevent garbage collection
+        html5SessionObject = sessionObject;
+        
+        // Adding onConnection event handler
+        function connectionHandler(event) {
+            console.log("Event Received : " + event.type);
+            console.log(event.data);
+        }
+        sessionObject.addListener("onConnection", connectionHandler);
+
+        // Adding onConnectionClosed event handler
+        function connectionClosedHandler(event) {
+            console.log("Event Received : " + event.type);
+            console.log(event.data);
+            // Clear session reference on close
+            html5SessionObject = null;
+        }
+        sessionObject.addListener("onConnectionClosed", connectionClosedHandler);
+
+        // Adding onError event handler
+        function onErrorHandler(event) {
+            console.log("Event Received : " + event.type);
+            console.log(event.data);
+        }
+        sessionObject.addListener("onError", onErrorHandler);
+
+        // Adding onURLRedirection event handler
+        function onURLRedirectionHandler(event) {
+            console.log("Event Received : " + event.type);
+            console.log(event.data);
+        }
+        sessionObject.addListener("onURLRedirection", onURLRedirectionHandler);
+
+        const launchData = { "type": "ini", "value": icaFile.data };
         sessionObject.start(launchData);
     }
-    citrix.receiver.createSession(sessionId, connectionParams,sessionCreated);
+    try {
+        citrix.receiver.setPath("CDN");
+        citrix.receiver.createSession(sessionId, connectionParams, sessionCreated);
+    } catch (ex) {
+        console.log(ex)
+    }
 }
+// Keep reference to iframe session object to prevent premature cleanup
+let iframeSessionObject = null;
+
 async function launchIFrame(launchUrl) {
-    citrix.receiver.setPath("https://localhost:7183/receiver"); 
     let icaFile = await apiHandler.get(launchUrl)
     const id = "iframe"
     const connectionParams = {
@@ -172,14 +214,47 @@ async function launchIFrame(launchUrl) {
     document.getElementById("sessionIframe").style.display = "block";
 
     function sessionCreated(sessionObject){
-        function connectionClosedHandler(event){
-            document.getElementById("sessionIframe").style.display = "none";
+        // Store session object reference to prevent garbage collection
+        iframeSessionObject = sessionObject;
+
+        // Adding onConnection event handler
+        function connectionHandler(event) {
+            console.log("Event Received : " + event.type);
+            console.log(event.data);
         }
-        sessionObject.addListener("onConnectionClosed",connectionClosedHandler);
+        sessionObject.addListener("onConnection", connectionHandler);
 
+        // Adding onConnectionClosed event handler
+        function connectionClosedHandler(event){
+            console.log("Event Received : " + event.type);
+            console.log(event.data);
+            document.getElementById("sessionIframe").style.display = "none";
+            // Clear session reference on close
+            iframeSessionObject = null;
+        }
+        sessionObject.addListener("onConnectionClosed", connectionClosedHandler);
 
-        const launchData = {"type": "ini", value: icaFile.data};
+        // Adding onError event handler
+        function onErrorHandler(event) {
+            console.log("Event Received : " + event.type);
+            console.log(event.data);
+        }
+        sessionObject.addListener("onError", onErrorHandler);
+
+        // Adding onURLRedirection event handler
+        function onURLRedirectionHandler(event) {
+            console.log("Event Received : " + event.type);
+            console.log(event.data);
+        }
+        sessionObject.addListener("onURLRedirection", onURLRedirectionHandler);
+
+        const launchData = {"type": "ini", "value": icaFile.data};
         sessionObject.start(launchData);
     }
-    citrix.receiver.createSession(id, connectionParams,sessionCreated);
+    try {
+        citrix.receiver.setPath("CDN");
+        citrix.receiver.createSession(id, connectionParams, sessionCreated);
+    } catch (ex) {
+        console.log(ex)
+    }
 }

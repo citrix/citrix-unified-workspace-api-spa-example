@@ -1,1 +1,311 @@
-if(typeof window!="\x75\x6e\x64\x65\x66\x69\x6e\x65\x64"){var tAAh8;var dzOZn=new Array((0x6b+7651-0x1e4e));var clientURL;var sessionId;var pFLBz;var oXXaZ;window.isSDK=true;var YSMdr=window.location.origin?window.location.origin:(window.location.protocol+"\x2f\x2f"+window.location.hostname+(window.location.port?"\x3a"+window.location.port:''));function BTboH(){tAAh8=new HTML5Engine();tAAh8.setConfigurationPath(clientURL);tAAh8.setSessionId(sessionId);tAAh8.setParameter({"\x73\x6f\x75\x72\x63\x65\x63\x6f\x64\x65":{"\x66\x69\x6c\x65\x70\x61\x74\x68":clientURL+"\x73\x72\x63\x2f","\x69\x6d\x61\x67\x65\x70\x61\x74\x68":clientURL+"\x72\x65\x73\x6f\x75\x72\x63\x65\x73\x2f","\x6c\x6f\x63\x61\x6c\x69\x7a\x61\x74\x69\x6f\x6e\x70\x61\x74\x68":clientURL+"\x6c\x6f\x63\x61\x6c\x65\x73\x2f","\x74\x68\x69\x72\x64\x70\x61\x72\x74\x79\x70\x61\x74\x68":clientURL+"\x54\x68\x69\x72\x64\x50\x61\x72\x74\x79\x4c\x69\x62\x72\x61\x72\x79\x2f","\x77\x6f\x72\x6b\x65\x72\x70\x61\x74\x68":"\x2e\x2f\x48\x44\x58\x4c\x61\x75\x6e\x63\x68\x65\x72\x2e\x6a\x73","\x63\x73\x73\x70\x61\x74\x68":clientURL+"\x43\x61\x73\x63\x61\x64\x69\x6e\x67\x53\x74\x79\x6c\x65\x53\x68\x65\x65\x74\x2f"}});tAAh8.setParameter({"\x75\x69":{"\x72\x6f\x6f\x74":"\x63\x69\x74\x72\x69\x78\x75\x69\x45\x6c\x65\x6d\x65\x6e\x74"}});tAAh8.setParameter({"\x69\x63\x61":{"\x74\x79\x70\x65":"\x75\x6e\x6b\x6e\x6f\x77\x6e"}});var lang=(!oXXaZ)?navigator.language:oXXaZ;if(lang==null||lang==undefined){lang=navigator.browserLanguage;}tAAh8.setParameter({"\x70\x72\x65\x66\x65\x72\x65\x6e\x63\x65\x73":{"\x6c\x61\x6e\x67":lang}});tAAh8.initEngine();if(dzOZn.length>(0xf0b+4119-0x1f22)){tAAh8.handleMessage(dzOZn,dzOZn.length);dzOZn=new Array((0xd4+6655-0x1ad3));}};function YEZhR(){var nb_m3=document.getElementById("\x63\x69\x74\x72\x69\x78\x75\x69\x45\x6c\x65\x6d\x65\x6e\x74");nb_m3.parentElement.removeChild(nb_m3);loadDependentFiles({"\x73\x6f\x75\x72\x63\x65\x63\x6f\x64\x65":{"\x6c\x6f\x63\x61\x6c\x69\x7a\x61\x74\x69\x6f\x6e\x70\x61\x74\x68":clientURL+"\x6c\x6f\x63\x61\x6c\x65\x73\x2f","\x74\x68\x69\x72\x64\x70\x61\x72\x74\x79\x70\x61\x74\x68":clientURL+"\x54\x68\x69\x72\x64\x50\x61\x72\x74\x79\x4c\x69\x62\x72\x61\x72\x79\x2f","\x63\x73\x73\x70\x61\x74\x68":clientURL+"\x43\x61\x73\x63\x61\x64\x69\x6e\x67\x53\x74\x79\x6c\x65\x53\x68\x65\x65\x74\x2f"}});};function xELuV(clientURL){var Bh2FU=document.createElement("\x73\x63\x72\x69\x70\x74");Bh2FU.type="\x74\x65\x78\x74\x2f\x6a\x61\x76\x61\x73\x63\x72\x69\x70\x74";Bh2FU.async=false;switch(pFLBz){case "\x48\x54\x4d\x4c\x35\x45\x6e\x67\x69\x6e\x65":Bh2FU.onload=BTboH;Bh2FU.src=clientURL+"\x73\x72\x63\x2f\x53\x65\x73\x73\x69\x6f\x6e\x57\x69\x6e\x64\x6f\x77\x2e\x6a\x73";document.body.appendChild(Bh2FU);break;case "\x6c\x6f\x67":Bh2FU.onload=YEZhR;Bh2FU.src=clientURL+"\x73\x72\x63\x2f\x42\x75\x73\x69\x6e\x65\x73\x73\x2f\x6c\x6f\x67\x2e\x6a\x73";document.body.appendChild(Bh2FU);break;default:console.log("\x55\x6e\x72\x65\x63\x6f\x67\x6e\x69\x7a\x65\x64\x20\x65\x6e\x67\x69\x6e\x65\x20\x74\x79\x70\x65");break;};};window.addEventListener("\x6d\x65\x73\x73\x61\x67\x65",function(event){if(event.origin===YSMdr){if(event.data&&event.data["\x63\x6d\x64"]==="\x43\x6c\x69\x65\x6e\x74\x55\x52\x4c"){clientURL=event.data["\x75\x72\x6c"];sessionId=event.data["\x73\x65\x73\x73\x69\x6f\x6e\x49\x64"];oXXaZ=event.data["\x70\x72\x65\x66\x65\x72\x72\x65\x64\x4c\x61\x6e\x67"];xELuV(clientURL);}if(tAAh8){tAAh8.handleMessage(event);}else{dzOZn[dzOZn.length]=event;};}},false);window.onload=function(e){var parentWindow=(window.opener||window.parent);if(parentWindow){var V8GLP=location.href.split("\x3f")[(0x59f+2416-0xf0e)].split("\x26");var dTVGC=V8GLP[(0xfa4+5026-0x2346)].split("\x23");for(var XMC0D=(0x1b4+9072-0x2524);XMC0D<dTVGC.length;XMC0D++){var SOh1z=dTVGC[XMC0D].split("\x3d");if(SOh1z.length==(0xcf0+5150-0x210c)&&SOh1z[(0xb92+523-0xd9d)]==="\x6c\x61\x75\x6e\x63\x68\x69\x64"){parentWindow.postMessage({"\x63\x6d\x64":"\x57\x49\x4e\x44\x4f\x57\x4c\x4f\x41\x44\x45\x44","\x64\x61\x74\x61":{"\x6c\x61\x75\x6e\x63\x68\x69\x64":SOh1z[(0x8ac+1658-0xf25)]},"\x73\x6f\x75\x72\x63\x65":"\x48\x54\x4d\x4c\x35\x43\x6c\x69\x65\x6e\x74"},YSMdr);break;};}var SOh1z=V8GLP[(0xfc2+3018-0x1b8b)].split("\x3d");if(SOh1z.length==(0x15ef+280-0x1705)&&SOh1z[(0x433+1836-0xb5f)]==="\x65\x6e\x67\x69\x6e\x65\x54\x79\x70\x65"){pFLBz=SOh1z[(0x8a8+908-0xc33)];};}};}else{var HTML5LocationParam=new Array((0x134+7928-0x202c));(function(){var dTVGC=location.href.split("\x3f")[(0x1100+3729-0x1f90)].split("\x26");for(var XMC0D=(0x161+8759-0x2398);XMC0D<dTVGC.length;XMC0D++){var SOh1z=dTVGC[XMC0D].split("\x3d");if(SOh1z.length==(0xc63+78-0xcaf))HTML5LocationParam[SOh1z[(0x2d0+7517-0x202d)]]=SOh1z[(0x739+1959-0xedf)];}})();importScripts(HTML5LocationParam["\x66\x69\x6c\x65\x70\x61\x74\x68"]+"\x77\x6f\x72\x6b\x65\x72\x68\x65\x6c\x70\x65\x72\x2e\x6a\x73");}
+/*Copyright (c) 2010 - 2025 Citrix Systems, Inc.All Rights Reserved. Confidential & Proprietary.
+The materials in this file are protected by copyright and other intellectual property laws.
+Copying and use is permitted only by end users to enable use of Citrix server technology.
+Any other reproduction or use of this file, or any portion of it, is unlicensed.
+In no event may the file be reverse engineered or may copies be made in association with deobfuscation, decompilation or disassembly.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.*/
+
+var HDXLauncher = (function(){
+
+	function loadStyleSheet(path) {
+		var head  = document.getElementsByTagName('head')[0];
+		var link  = document.createElement('link');
+		link.rel  = 'stylesheet';
+		link.type = 'text/css';
+		link.href = path;
+		link.media = 'all';
+		head.appendChild(link);
+	}
+
+	function addScriptWithSRI(filelist, onSuccessCallback, onErrorCallback) {
+
+		var loadedFileCount = 0;
+		var totalFileCount = filelist.length;
+		var errorStatus = false;
+
+		function onload() {
+			loadedFileCount ++;
+			if(totalFileCount === loadedFileCount) {
+				errorStatus ? onErrorCallback() : onSuccessCallback();
+			}
+		}
+		function onLoadSuccess() {
+			onload();
+		}
+
+		function onLoadError() {
+			errorStatus = true;
+			onload();
+		}
+
+		for(var i = 0; i < totalFileCount; i++) {
+			var script = document.createElement('script');
+			script.src = filelist[i];
+			script.async = false;
+			script.onload = onLoadSuccess;
+			script.onerror = onLoadError;
+			var fileName = script.src.split("/");
+			fileName = fileName[fileName.length-1];
+			if(typeof globalThis["SRIOfScripts"] !== "undefined" && globalThis["SRIOfScripts"][fileName]){
+				script["integrity"] = globalThis["SRIOfScripts"][fileName];
+				script["crossOrigin"] = "anonymous";
+			}
+			document.body.appendChild(script);
+		}
+}
+
+if(typeof window != "undefined" )
+{		
+		var engine;
+		var eventArray = new Array(0);		
+		globalThis["clientURL"] = "";
+		globalThis["RELATIVE_SOURCE_PATH"] = {
+			'filepath' : "src/",                          // src folder path
+			'imagepath' : "resources/",                   // resources folder path
+			'localizationpath' : "locales/",              // locales folder path
+			'thirdpartypath' : "ThirdPartyLibrary/",       // 3rd party lib path
+			'workerpath' : "./HDXLauncher.js",  // main launcher path for worker
+			'csspath' : "CascadingStyleSheet/",             // css folder path
+		    'ui': 'UI/'                                      // launch file loaders path
+        };
+  		window.configurationPath = "";
+		var sessionId;
+		var engineType;
+		var preferredLang;
+		window.isSDK = true;
+		var selfDomain = window.location.origin ? window.location.origin : (window.location.protocol + '//' + window.location.hostname + (window.location.port ? ':' + window.location.port : ''));
+		var fallbackEnginePath="";
+
+		//sets the 'clientURL' based on underlying browser. Loading engine, even if we fail to check browser
+		function loadLegacyOrModernEngine() {
+			loadStyleSheet(globalThis["clientURL"] + globalThis["RELATIVE_SOURCE_PATH"]['csspath'] +"ctxs.launcherUI.css");
+            var filesList = [
+				globalThis["clientURL"] + "Common/LocalStorage.js",
+				globalThis["clientURL"] + "src/Business/Logger/log.js",
+                globalThis["clientURL"] + globalThis["RELATIVE_SOURCE_PATH"]['ui'] + "LaunchUiLoader.js",
+                globalThis["clientURL"] + globalThis["RELATIVE_SOURCE_PATH"]['filepath'] + "IcaFileLoader.js",
+                globalThis["clientURL"] + "AppVariableScope/ScopeDeclaration.js",
+                globalThis["clientURL"] + "src/LegacyBrowserCheck.js"
+            ];
+			addScriptWithSRI(filesList, function () {
+				LegacyBrowserCheck.isLegacyBrowser(globalThis["clientURL"], addScriptWithSRI, async function (result) {
+					if(result) {
+						console.error(" Browser detected as unsupported browser , Please upgrade to a supported browser or use a compatible one.refer : https://docs.citrix.com/en-us/citrix-workspace-app-for-html5/system-requirements#browsers");
+						if(engineType === 'HTML5Engine') {
+							closeHTML5Session();
+						}
+						return;
+					}
+					await getIcaData();
+					loadEngine(globalThis["clientURL"]);
+				});
+			}, async function (err) {
+				console.log("HDXLauncher : Unable to check if browser is legacy, assuming it's a modern browser", err);
+				await getIcaData();
+				loadEngine(globalThis["clientURL"]);
+			});
+		}
+
+		async function getIcaData() {
+			let icaLoader = globalThis["ICA_LOADER"];
+			let featureFlagObj = await globalThis["LOCAL_STORAGE"]["localStorage"]["getItemPromise"]('launchUiImprovement');
+			globalThis["LAUNCH_UI_LOADER"]["isFeatureEnabled"] = globalThis["LAUNCH_UI_LOADER"]["evaluateLauncherFeatureFlag"](featureFlagObj);
+			if (globalThis["LAUNCH_UI_LOADER"]["isFeatureEnabled"] && engineType === 'HTML5Engine') {
+				let ajaxHeader = {};
+				let icaParams = {};
+				icaLoader["parseUrlParams"](icaParams, ajaxHeader);
+				icaParams["eventArray"] = eventArray;
+				icaLoader["getIcaData"](icaParams, ajaxHeader);
+			} else {
+				// Setting the featureflag as false to prevent any other calls to LAUNCH_UI_LOADER
+				globalThis["LAUNCH_UI_LOADER"]["isFeatureEnabled"] = false;
+				globalThis["LAUNCH_UI_LOADER"]["ui"]["hide"]();
+			}
+		}
+
+		function startHTMLSession( ){
+			engine = new HTML5Engine();
+			engine.setConfigurationPath(window.configurationPath);
+			engine.setSessionId(sessionId);
+			engine.setParameter({
+					'sourcecode' : {
+						'filepath' : globalThis["clientURL"]+ globalThis["RELATIVE_SOURCE_PATH"]['filepath'],                          // src folder path
+						'imagepath' : globalThis["clientURL"]+globalThis["RELATIVE_SOURCE_PATH"]['imagepath'],                   // resources folder path
+						'localizationpath' : globalThis["clientURL"]+globalThis["RELATIVE_SOURCE_PATH"]['localizationpath'],              // locales folder path
+						'thirdpartypath' : globalThis["clientURL"]+globalThis["RELATIVE_SOURCE_PATH"]['thirdpartypath'],       // 3rd party lib path
+						'workerpath' : globalThis["RELATIVE_SOURCE_PATH"]['workerpath'],  // main launcher path for worker
+						'csspath' : globalThis["clientURL"]+globalThis["RELATIVE_SOURCE_PATH"]['csspath']             // css folder path
+					}
+            });
+			
+			engine.setParameter({'ui':{'root':"citrixuiElement"}});
+			engine.setParameter({'ica':{'type':"unknown"}});
+
+			//To translate based on the browser's langugage
+			var lang = (!preferredLang)?navigator.language : preferredLang;
+			if(lang==null || lang==undefined){
+				lang = navigator.browserLanguage; //IE 10 returns navigator.language as undefined.
+			}
+			engine.setParameter({'preferences' : {'lang' : lang }});			
+
+			engine.initEngine( );
+			if(eventArray.length > 0){
+				engine.handleMessage(eventArray, eventArray.length);
+				eventArray = new Array(0);
+			}			
+		}
+		//If SessionWindow.js file is not reachable then throw onConnectionClosed event
+		function closeHTML5Session(){
+			var parentWindow = (window.opener || window.parent);
+			if(parentWindow){
+				parentWindow.postMessage({"type":"onConnectionClosed","sessionId": sessionId,"data":"UNREACHABLE_CLIENT","source":"HTML5Client"},selfDomain);				
+			}			
+			window.close();
+		}
+		
+		function openLogPage(){
+			var uiElement = document.getElementById("citrixuiElement");
+			uiElement.parentElement.removeChild(uiElement);			
+			
+			loadDependentFiles({
+				'sourcecode' : {
+					'localizationpath' : globalThis["clientURL"]+globalThis["RELATIVE_SOURCE_PATH"]['localizationpath'],              // locales folder path
+					'thirdpartypath' : globalThis["clientURL"]+globalThis["RELATIVE_SOURCE_PATH"]['thirdpartypath'],       // 3rd party lib path
+					'csspath' : globalThis["clientURL"]+globalThis["RELATIVE_SOURCE_PATH"]['csspath']             // css folder path
+				}
+            });
+		}
+		
+		function loadEngine(clientURL){
+			
+			switch(engineType){
+				case 'HTML5Engine' :
+									addScriptWithSRI([clientURL + "src/SessionWindow.js"], startHTMLSession, function(){
+										if(fallbackEnginePath){
+											globalThis["clientURL"] = fallbackEnginePath;
+											window.configurationPath = globalThis["clientURL"];
+											fallbackEnginePath = "";
+											globalThis["SRIOfScripts"] = {};//Resets the checksum as of CDN
+											loadLegacyOrModernEngine();
+
+										}else{
+											closeHTML5Session();
+										}
+									});
+									break;
+				case 'log':			addScriptWithSRI([clientURL + "src/Business/Logger/log.js"], openLogPage, function(){
+										if(fallbackEnginePath){
+											globalThis["clientURL"] = fallbackEnginePath;
+											window.configurationPath = globalThis["clientURL"];
+											fallbackEnginePath = "";
+											loadLegacyOrModernEngine();
+										}else{
+											window.close();
+										}
+									});
+									break;
+				case 'displayWindow' : //Do nothing added as placeholder to handle anything in future if required
+									break;
+				default : 
+						console.log("Unrecognized engine type");
+						break;
+			}
+		}	
+		//Fetch the Subresource Integrity for all the obfuscated scripts
+		function getSRIForScripts(cb){
+			if(globalThis["clientURL"] && globalThis["clientURL"].indexOf("html5cdn.cloud.com") !==-1){
+				addScriptWithSRI([globalThis["clientURL"] + "SRI.js"], cb, function(){
+					console.log("Unable to fetch Check sum file - CDN not reachable");
+					globalThis["SRIOfScripts"] = {};
+					if(fallbackEnginePath){
+						globalThis["clientURL"] = fallbackEnginePath;
+						window.configurationPath = globalThis["clientURL"];
+						fallbackEnginePath = "";
+						console.log("Using fallbackEnginePath set by customer");
+						loadLegacyOrModernEngine();
+					}else{
+						closeHTML5Session();
+					}					
+				});
+			}else{
+				//Adding SRIOfScripts only for files fetched from CDN.
+				globalThis["SRIOfScripts"] = {};
+				cb();
+			}			
+		}
+
+		function processPostMessage(event) {
+			if (event.origin === selfDomain) {
+				if (event.data && event.data["cmd"] === "ClientURL") {
+					const sdkVersion = event.data["SDKVersion"];
+					// storing this in the global scope to be used in the engine, for AOT logging and CEIP
+					globalThis["Html5SDKVersion"] = sdkVersion;
+					globalThis["clientURL"] = event.data["url"];
+					window.configurationPath = globalThis["clientURL"];
+					sessionId = event.data["sessionId"];
+					preferredLang = event.data["preferredLang"];
+					fallbackEnginePath = event.data["fallbackEnginePath"];
+					getSRIForScripts(function () {
+						loadLegacyOrModernEngine();
+					});
+				}
+				if (event.data && event.data["cmd"] && event.data["cmd"].toLowerCase() === "config") {
+					// This is storing here to reuse it in the launcher Ui loader cancel button action
+					globalThis["LAUNCH_DATA"] = {
+						"redirectUrl": event.data["config"] && event.data["config"]["window"] ? event.data["config"]["window"]["redirecturl"] : ""
+					};
+				}
+				if (engine) {
+					engine.handleMessage(event);
+				} else {
+					eventArray[eventArray.length] = event;
+				}
+			}
+		}
+
+		// To be used when posting ICA data via message to HTML5 Workspace app
+		window.addEventListener("message", processPostMessage , false);
+		
+		window.onload=function(e){
+			var parentWindow = (window.opener || window.parent);
+			if(parentWindow){
+				var locationParams = (location.href.split('?').length > 1 ) ? location.href.split('?')[1].split('&') : location.href.split('?')[0];
+				var key_Values = locationParams[0].split('#');				
+				
+				if(key_Values){
+					//Fetching the launchId
+					for (var i = 0; i < key_Values.length; i++) {
+						let key_Value = key_Values[i].split("=");
+						if (key_Value.length == 2 && key_Value[0] === "launchid"){						
+							parentWindow.postMessage({"cmd":"WINDOWLOADED","data":{"launchid": key_Value[1]},"source":"HTML5Client"},selfDomain);
+							break;
+						}
+					}	
+				}
+				
+				if(locationParams[1]){
+					//Fetching the engineType
+					let key_Value = locationParams[1].split("=");
+					if (key_Value.length == 2 && key_Value[0] === "engineType"){					
+						engineType = key_Value[1];												
+					}				
+				}
+			}
+		}
+  
+}else{
+	globalThis["HTML5LocationParam"] = {};
+	(function() {
+		var key_Values = location.href.split('?')[1].split('&');
+		for (var i = 0; i < key_Values.length; i++) {
+			let key_Value = key_Values[i].split("=");
+			if (key_Value.length == 2)
+				globalThis["HTML5LocationParam"][key_Value[0]] = key_Value[1];
+		}
+	})();
+	importScripts(globalThis["HTML5LocationParam"]["filepath"] + "workerhelper.js");
+}
+
+	var isUT = ((typeof dependency) !== "undefined") && dependency.testEnv;
+	
+})();

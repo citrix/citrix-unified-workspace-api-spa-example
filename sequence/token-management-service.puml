@@ -55,10 +55,9 @@ wspapi --> spa : 200 OK [Status]
 
 == Native HDX Launch (Protocol Handler) ==
 browser -> spa : Native Launch
-spa -> wspapi : POST https://{CUSTOMER_DOMAIN}/citrixapi/store/resources/{resourceId}/tickets\n [Access Token 2]
-spa <-- wspapi : Ica Launch Ticket (Ica ticket url)
-spa -> spa : Extract launch url,\nrename protocol to receiver://{ticketurl}
-spa -> browser : Initiate protocol handler receiver://{ticketurl}
+spa -> wspapi : GET https://{CUSTOMER_DOMAIN}/citrixapi/store/resources/{resourceId}/icaFileFetchTicket\n [Access Token 2]
+spa <-- wspapi : Ica File Fetch Ticket Response (Extract `receiverUri://...`)
+spa -> browser : Initiate protocol handler by opening `receiverUri://...`
 browser -> help : Transfer ticket data
 help -> wspapi :  POST\n https://{CUSTOMER_DOMAIN}/citrixapi/store/client/icaFile\n [Body: Ticket]
 wspapi -> help : Ica File
