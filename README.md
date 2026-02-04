@@ -13,7 +13,7 @@ This is purely an example and shouldn't be used for real production services.
 ## Prerequisites
 
 - You have either a Private or Public Workspace OAuth Client
-- You will be running the example code in Visual Studio and can run [.NET 9.0](https://dotnet.microsoft.com/en-us/download/dotnet/9.0)
+- You will be running the example code in Visual Studio and can run [.NET 10.0](https://dotnet.microsoft.com/en-us/download/dotnet/10.0)
 - You have the [Citrix Workspace App](https://www.citrix.com/downloads/workspace-app/windows/workspace-app-for-windows-latest.html) installed
 
 ## Getting Started
@@ -83,15 +83,16 @@ You can switch between the launch types using the dropdown:
 
 ![Launch Types](./screenshots/Launch_Types.PNG)
 
-### Native (Receiver) launches
+### "Receiver" Ticketed ICA launch (Citrix Workspace App)
 
-Native launches work by calling the native Citrix Workspace Application (CWA) with a launch ticket that can be obtained from the `launchstatus` endpoint, returned as part of the resource enumeration. This response contains the URL to redirect the user to.
+Citrix Workspace App (CWA) launches work by calling the receiver (old name for the CWA) with a launch ticket that can obtained from the `icaFileFetchTicketUrl` endpoint on a resource (see resource enumeration response for details). 
+The API endpoint will return a `receiverUri` which can be directly opened via a browser to start the Citrix Workspace App that performs the launch.
 
 This launch flow is detailed in the [sequence diagram above](#spa-and-token-management-service-sequence-diagram).
 
 ### HTML5 and IFrame launches
 
-HTML5 and IFrame launches work similarly to each other. These launch methods make use of the [Citrix HTML5 HDX SDK](https://developer-docs.citrix.com/en-us/citrix-workspace-app-for-html5/workspace-app-html5-hdx-sdx/hdx-sdk-html5). This SDK uses the ICA file which contains information about how a connection should be established. An ICA file can be obtained from the `launchica` endpoint, returned as part of the resource enumeration.
+HTML5 and IFrame launches work similarly to each other. These launch methods make use of the [Citrix HTML5 HDX SDK](https://developer-docs.citrix.com/en-us/citrix-workspace-app-for-html5/workspace-app-html5-hdx-sdx/hdx-sdk-html5). This SDK uses the ICA file which contains information about how a connection should be established. An ICA file can be obtained from the `icaFileUrl` endpoint, returned as part of the resource enumeration.
 
 ![HTML Launch Flow](./sequence/html5-launch-flow.png)
 
@@ -127,4 +128,4 @@ The repo includes the following javascript libraries,
 
 ## License
 
-Copyright © 2025. Cloud Software Group, Inc. All Rights Reserved.
+Copyright © 2026. Cloud Software Group, Inc. All Rights Reserved.
